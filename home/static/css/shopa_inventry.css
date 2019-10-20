@@ -1,0 +1,108 @@
+.apka_invent_main,#apka_invent_child{
+	background-color: red;
+	width: 96%;
+	padding: 2% 2% 2% 2%; 
+	height: 25px;
+	margin-top: 2px;
+}
+#apka_invent_child{
+	display: none;
+	background-color: grey;
+}
+.apka_invent_name{
+	font-size: 19px;
+	color:white;
+	font-weight: bold;
+	float: left;
+	width: 92%;
+	height: 100%;
+}
+.apka_invent_sign{
+	float: right;
+	width: 8%;
+	height: 100%;
+}
+.apka_invent_sign img{
+	width: 100%;
+	height: 100%;
+}
+/*for all shops swiper*/
+.swiper-container.apka_invent_subchild{
+    height: 120px;
+    padding:2% 0% 3% 4%;
+    width: 96%;
+    display: none;
+}
+.swiper-slide{
+  padding: .8%;
+    margin-top: 5px;
+    text-align: center;
+    width: 90px;
+    background-color: white;
+    height: 80%;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.apka_invent_product_body{
+	width: 100%;
+	height: 50%;
+}
+.apka_invent_product_check{
+	float: left;
+	width: 27%;
+	height: 50%;
+}
+/* check box work*/
+/* The container */
+.apka_invent_product_quantity{
+	width: 27%;
+	height: 50%;
+	float:left;
+}
+.apka_invent_product_quantity span{
+	float: right;
+	margin-right: 1px;
+	padding: 2px;
+	border: .5px solid blue;
+	font-size: 14px;
+	text-align: center;
+}
+.apka_invent_product_img{
+	width: 46%;
+	height: 100%;
+	float:left;
+}
+.apka_invent_product_img img{
+	width: 100%;
+	height: 100%;
+}
+
+.apka_invent_product_name,.apka_invent_product_weight,.apka_invent_product_price{
+	width: 100%;
+	height: 16%;
+	font-size: 14px;
+
+}
+.apka_shop_multiproduct{
+	width: 100%;
+	height: 50px;
+	background-color: gray;
+	bottom: 0;
+	position: fixed;
+	display: none;
+}
+.apka_shop_multiproduct_delete{
+	width: 20%;
+	height: 100%;
+	background-color: lightgray;
+	float: right;
+}
+
+
+
+
+
+
+

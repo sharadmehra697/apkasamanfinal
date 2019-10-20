@@ -1,0 +1,114 @@
+/*notification*/
+
+.myorders{
+	background-color: purple;
+	font-size: 28px;
+	font-style: bold;
+	height: 50px;
+	width: 358px;
+	
+}
+
+.arrow{
+	float: left;
+}
+.heading1{
+	
+	height: 20px;	
+	margin-top: 10px;
+	margin-left: 80px;
+	float: left;
+	
+}
+.head1{
+	background-color:#f1eded ;
+	font-size: 18px;
+	padding: 5px;
+	width: 358px;
+	margin-top: 2px;
+
+}
+
+.amla{
+		margin-top: 10px;
+	float: left;
+}
+.or1{
+	font-size: 18px;
+	height: 30px;
+	width: 70px;
+	margin-left: 0px;
+	margin-top: 3px;
+	
+	float: left;
+}
+.orderid{
+	width:70px;
+	height: 30px;
+	margin-left: 170px;
+	margin-top: 3px;
+	font-size: 18px;
+	
+	border: 1px solid white;
+}
+.productname{
+	margin-left: 
+	font-size: 18px;
+	border: 1px solid white;
+	height: 30px;
+	width: 250px;
+
+}
+.producttime{
+	font-size: 18px;
+	
+	height: 30px;
+	width: 150px;
+	
+}
+.productprice{
+font-size: 18px;
+	
+	height: 30px;
+	width: 150px;
+
+}
+.failedimg{
+
+	margin-left: 30px;
+	margin-top: 70px;
+	
+	float: left;
+}
+
+.suc1{
+	color: green;
+	margin-left: 30px;
+	margin-top: 70px;
+	
+	float: left;
+}
+
+.offer1{
+	height: 120px;
+	width: 348px;
+	margin-left: 4px;
+	margin-top: 3px;
+	box-shadow: 0px 0px 7px 2px grey;
+	border:1px solid white;
+
+}
+/*fdivide whole card and failed.img image with div1 and div2*/
+.div1{
+	float: left;
+}
+.div2{
+	float: left;
+
+}
+.logo1{
+	
+		float: left;
+		margin-top: 10px;
+
+}

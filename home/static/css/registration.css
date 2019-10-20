@@ -1,0 +1,264 @@
+#regis_body{
+    margin: 20px;
+    height: auto;
+    border:1px solid gray;
+	border-radius: 5px 5px 0 0 ;
+	padding:10px;
+	box-shadow: 0px 8px 16px 0px rgba(117, 115, 115, 0.781);
+}
+.regis_forgotten_number_body,.regis_forgotten_otp_body,.regis_forgotten_newpass{
+	text-align: center;
+}
+.regis_forgotten{
+	width: 80%;
+	height: 30px;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 3px;
+	border:none;
+	color: #32C1C6;
+	border: 1px solid grey;
+}
+.regis_forgotten_enter{
+	font-size: 20px;
+	font-weight: bold;
+	padding: 3px;
+	color: white;
+	background: #2999E4;
+	width: auto;
+	margin-left: 30%;
+	margin-right: 30%;
+	padding-bottom: 5px;
+	margin-top: 20px;
+	border-radius: 2px;
+}
+
+.regis_head{
+	height: 35px;
+	width: 100%;
+	background: #0D7DDA;
+	color: white;
+	padding-top: 5px;
+	font-weight: bold;
+	font-size: 22px;
+	font-family: Segoe UI;
+	text-align: center;
+}
+
+.regis_number, .regis_otp,.regis_password{
+	height: 40px;
+	width: 95%;
+	margin-left: 8px;
+	margin-top: 30px;
+	background-color: gray;
+	border-radius: 5px;
+	border:1px solid gray;
+}
+.regis_number_err,.regis_otp_err,.regis_pass_err,.regis_cpass_err{
+	color: red;
+}
+.regis_number_code,.regis_date_birth{
+	float: left;
+	height: 55%;
+	padding: 3% 2%;
+	width: 8.5%;
+	border-radius: 5px 0px 0px 5px;
+}
+.regis_date_birth{
+	width: 32%;
+}
+.regis_number_mobile,.regis_date_birth_entry{
+	float: right;
+	height: 100%;
+	width: 87.5%;
+	border-radius: 0px 5px 5px 0px;
+}
+.regis_date_birth_entry{
+	width: 64%;
+	background-color: none;
+}
+.regis_number_mobile input,.regis_number_mobile_otp input,.regis_password input{
+	width: 98%;
+	height: 100%;
+	padding: 0%;
+	font-size: 18px;
+	padding-left: 2%;
+	border:none;
+	border-radius: 0px 5px 5px 0px;
+}
+.regis_number_mobile_otp,.regis_password_body{
+	float: right;
+	height: 100%;
+	width: 100%;
+	border-radius: 5px 5px 5px 0px;
+}
+.regis_number_mobile_otp input{
+	text-align: center;
+}
+.regis_join,.regis_checkotp,.regis_set_password{
+	height: 30px;
+	border:none;
+	font-size: 20px;
+	width: 40%;
+	text-align: center;
+	padding-top: 2%;
+	color: white;
+	background: #2999E4;
+	border-radius: 7px;
+	margin-top: 30px;
+	margin-left: 30%;
+}
+.regis_options{
+	width: 80%;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 10%;
+}
+.regis_options_line{
+	width: 14%;
+	height: 1.5px;
+	background: black;
+	float: left;
+	margin-top: 13.5px;
+}
+.or{
+	width: 70%;
+	height: 100%;
+	color: #C1BEC0;
+	margin: 0% 1%;
+	font-size: 20px;
+	text-align: center;
+	float: left;
+}
+.regis_social{
+	height: 30px;
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 10px;
+}
+
+.regis_social_link{
+	height: 100%;
+	width: 30%;
+	margin: 0% 1.65%; 
+	float: left;
+}
+.regis_social_link img{
+	width: 100%;
+	height: 100%;
+}
+.regis_login_link{
+	height: auto;
+	width: 80%;
+	font-size: 17px;
+	color: black;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 10%;
+}
+
+.benefits{
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	float: left;
+	margin-top: 10px;
+	font-size: 22px;
+	color: blue;
+}
+.allinone{
+	height: 60px;
+	width: 60%;
+	margin-left: 20%;
+	text-align: center;
+	float: left;
+	font-family: Stencil Std;
+	margin-top: 10px;
+	font-size: 22px;
+}
+.web_link{
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	float: left;
+	margin-top: 10px;
+	font-size: 18px;
+	color: blue;
+}
+.plus{
+	height: 20px;
+	width: 20px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 49%;
+}
+.plus img{
+	height: 100%;
+	width: 100%;
+}
+.delivery,.Selling,.advertisement{
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	float: left;
+	margin-top: 10px;
+	font-size: 18px;
+}
+.line1{
+	width: 50%;
+	height: 1.5px;
+	background: black;
+	float: left;
+	margin-left: 25%;
+	margin-bottom: 10px;
+	margin-top: 30px;
+}
+.pera{
+	height: 80px;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 20px;
+	font-size: 22px;
+	float: left;
+	text-align: center;
+}
+.register_now{
+	height: 30px;
+	width: 200px;
+	font-size: 22px;
+	background: blue;
+	color: white;
+	float: left;
+	border-radius: 5px;
+	margin-left: 80px;
+	margin-top: 40px;
+	text-align: center;
+}
+.shops_registered{
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	float: left;
+	margin-top: 10px;
+	font-size: 22px;
+	color: blue;
+}
+.count{
+	margin-top: 30px;
+	height: 50px;
+	width: 100%;
+	font-size: 50px;
+	text-align: center;
+	float: left;
+}
+.stories{
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	float: left;
+	margin-top: 10px;
+	font-size: 22px;
+	color: blue;
+	margin-bottom: 150px;
+}

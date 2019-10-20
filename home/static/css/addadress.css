@@ -1,0 +1,139 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+
+.back{
+	width: 354px;
+	margin-left: 3px;
+	margin-top: 3px;
+	height: 40px;
+	color: white;
+	background: #696CB9;
+	
+
+
+}
+.back1{
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	float: left;
+}
+.back2{
+	font-size: 25px;
+	float: left;
+	margin-top: 7px;
+	text-align: center;
+	height: 30px;
+	width:250px;
+}
+.state,.city{
+	margin-left: 10px;
+	margin-top: 40px;
+	height: 20px;
+	width: 70px;
+	font-size: 100%;
+	}
+	.stateselect{
+		height: 40px;
+		width: 330px;
+		
+	}
+select{
+	margin: 8px;
+	height: 40px;
+		width: 330px;
+		border-radius: 3px;
+}
+.abox{
+	height: 200px;
+	width: 340px;
+	border: 1.5px solid black;
+	margin: 10px;
+	font-size: 17px;
+}
+.sd h4{
+	float: left;
+	margin-left: 5px;
+}
+.sd input{
+	float: left;
+	height: 20px;
+	width: 50px;
+    margin-top: 18px;
+    margin-left: 30px;
+}
+.sd1 h4{
+	float: left;
+	margin-left: -150px;
+}
+.sd1 input{
+	float: left;
+	height: 20px;
+	width: 150px;
+    margin-top: 18px;
+    margin-left: -54px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.sd2 h4{
+	float: left;
+	margin-left: -250px;
+}
+.sd2 input{
+	float: left;
+	height: 20px;
+	width: 150px;
+    margin-top: 18px;
+    margin-left:-150px;
+     border: none;
+    border-bottom: 1px solid black;
+}
+.sd3 h4{
+	float: left;
+	margin-left: -250px; 
+}
+.sd3 input{
+	float: left;
+	height: 20px;
+	width: 50px;
+    margin-top: 18px;
+    margin-left:-150px;
+    border-bottom: 1px solid black;
+
+}
+.con h4{
+	float: left;
+	height: 20px;
+	width: 100%;
+
+}
+.con1 h4{
+	float: left;
+	height: 20px;
+	width: 150px;
+	margin-top: -15px;
+}
+.con1 input{
+	float: left;
+	height: 20px;
+	width: 200px;
+	margin-top: -22px;
+	margin-left: -20px;
+}
+.save{
+	height: 40px;
+	width: 354px;
+	background: #B779D8;
+	color: white;
+	margin-top: 150px;
+	padding: 2px;
+	text-align: center;
+}
+.save h4{
+	float: left;
+}
+.save img{
+	float: left;
+}

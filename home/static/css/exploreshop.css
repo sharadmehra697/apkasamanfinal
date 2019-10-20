@@ -1,0 +1,381 @@
+.myorders{
+	color: white;
+	border: 1px solid black;
+	background-color: purple;
+	font-size: 16px;
+	font-style: bold;
+	height: 30px;
+	width: 100%px;	
+}
+
+.arrow{
+	margin-top: 3px;
+	float: left;
+}
+.heading1{
+	height: 20px;
+	width: 70%;
+	
+	margin-top: 10px;
+	margin-left: 20px;
+	float: left;
+}
+.share_icon
+{	margin-top: 5px;
+	margin-left: 10px;	
+	
+	height: 20px;
+	width:20px;
+	float: left;
+
+}
+.share_icon img
+
+{
+	
+	width:20px;
+	
+}
+.shop_image_div
+{
+	height: 150px;
+	width: 99%;
+	
+	margin-top: 0px;
+	  
+	z-index: -1
+}
+.shop_image_div img
+{
+	height: 150px;
+	width: 99%;
+	z-index: 1;
+}
+.inside_image_div{
+	height: 40px;
+	width: 89%;  
+
+	
+	margin-left: 15px;
+	margin-top: -45px;
+	border-radius: 4px;
+	  position: absolute;
+	z-index: 0;
+	background-color: white;
+}
+.div_column1
+{	padding: 3px;
+	float: left;
+}
+.div_column2
+{	margin-top: 4px;
+		margin-left: 70px;
+	height: 30px;
+	width: 80px;
+
+	border-radius: 4px;
+	float: left;
+}
+.div_column2 img
+{	 
+	height: 20px;
+	width: 20px;
+
+	
+	
+}
+.dukan_name
+{
+	float: left;
+}
+.l1 img{
+	height: 16px;
+	width: 16px;
+}
+.offer_div{
+	margin-top: 17px;
+	height: 30px;
+	width: 99%;
+	background-color: orange;
+}
+.d1{
+	margin-top:5px;
+	color: white;
+	float: left;
+	margin-left: 10px;
+}
+.d2{
+	margin-top:5px;
+	color: red;
+	float: left;
+	margin-left: 50px;
+}
+.d3{
+	border-radius: 4px;
+	margin-top: 5px;
+	height: 20px;
+	width: 15%;
+	text-align: center;
+	background-color: white;
+	color: black;
+	float: left;
+	margin-left: 5px;
+}
+.search_item{
+	float: left;
+	
+	width:80%;
+	height: 30px;
+	background-color: white;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-top: 12px;
+	box-shadow: 3px 3px 3px 3px lightgrey;
+
+}
+.search_item input
+{
+	float: left;
+height: 25px;	
+width: 86%;
+background: url({%static 'img/searchh1.png' %}) no-repeat -8px;	
+padding-left:35px; 
+
+
+}
+.filter_image{
+	
+	float: left;
+	height: 30px;	
+	width: 10%;
+	margin-left: 10px;
+	margin-top: 12px;
+	box-shadow: 3px 3px 3px 3px lightgrey;
+}
+.filter_image img{
+	
+	margin-left: 7px;
+	margin-top: 3px;
+
+}
+.head2
+{	
+	margin-top:50px;
+	margin-left: 10px;
+	width: 94%;
+	height: 30px;
+	background-color: white;
+	
+	border-radius: 4px;
+}
+.item{
+	width: 99%;
+	height: 50px;
+	
+	box-shadow: 3px 3px 3px 3px lightgrey;
+
+}
+.div1{
+	margin-left: 4px;
+	height: 50px;
+	width: 50%;
+	
+	float: left;
+}
+
+.div2{
+	float: left;
+	width: 20%;
+	margin-top: 6px;
+	margin-left: 10px;
+	
+}
+.item_name{
+	width: 65%;
+	float: left;
+	
+}
+.item_weight{
+	width: 29%;
+	
+	margin-left: 3px;
+	float: left;
+}
+.g1{
+	height: 20px;
+	width: 100%;
+	
+}
+.g2{
+	height: 20px;
+	width: 40%;
+	
+}
+.item_price{
+
+	float: left;
+}
+.simshop{
+	color: white;
+	margin-left: 10px;
+	border-radius: 7px;
+	float: left;
+	height: 18px;
+	width: 40px;
+
+}
+.item_rating{
+	color: white;
+	margin-left: 10px;
+	border-radius: 7px;
+	float: left;
+	height: 18px;
+	width: 40px;
+	
+}
+
+.quantity_name
+{	
+	float: center;
+}
+.add_button{
+	width: 15%;
+	
+	margin-left: 30px;
+	float: left;
+	margin-top: 20px;
+	
+}
+.add_button button{
+	width: 100%;
+	font-size: 16px;
+	color: white;
+	border-radius: 6px;
+	background-color: blue;
+	
+}
+.quantity{
+	float:center;
+}
+
+.head_div1{
+	margin-top: 5px;
+	height: 30px;
+	width: 99%;
+	background-color: white;
+}
+.head3{
+	padding: 5px;
+	float: left;
+
+}
+.view_button{
+	width: 21%;
+	margin-left: 190px;
+	float: left;
+	margin-top: 5px;
+}
+.similar_shop{
+	width: 99%;
+	height: 150px;
+	border:1px solid black;
+}
+.shop1{
+	width: 
+}
+.shop_image{
+
+}
+.user_review{
+	
+	margin-left: 5px;
+}
+.review1
+{
+	height: 80px;
+	width: 99%;
+}
+.user_review input{
+
+	border: 1px solid black;
+	border-radius: 4px;
+	height: 60px;
+	width: 60%;
+}
+.user_review button{
+	background-color: blue;
+
+	border: 1px solid lightgray;
+	border-radius: 4px;
+	margin-left: 10px;
+	height: 25px;
+	width: 60px;
+}
+.reviewed_div{
+	border: 1px solid black;
+	border-radius: 4px;
+	margin-left: 5px;
+	height: 250px;
+	width: 97%;
+	
+	border-radius: 4px;
+}
+.heading2{
+	margin-left: 5px;
+}
+.reviewed_user_img
+{	margin-top: 10px;
+	margin-left: 3px;
+	height: 80px;
+	width: 80px;
+	
+	float: left;
+
+}
+.reviewed_user_img image
+{
+	height: 150px;
+	width: 80px;
+	padding-left: 10px;
+}
+.second_div
+{
+	height: 80px;
+	width: 55%;
+	
+	float: left;
+}
+.date_div{
+	float: left;
+	width: 15%;
+	margin-left: 10px;
+	
+
+}
+/*swiper*/
+
+.s_image
+
+{	
+height: 40px;
+}
+.s_image img
+{	position: absolute;
+	height: 80px;
+	
+	width: 80px;
+}
+.s_name
+{	padding:3px;	
+	font-size: 14px;
+	top: 100px;
+	position: absolute;
+	
+}
+.Explore_button
+{
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 30px;
+	border-radius: 4px;
+}

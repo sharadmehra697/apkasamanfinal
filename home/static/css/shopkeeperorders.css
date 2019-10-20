@@ -1,0 +1,230 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+
+.back{
+	width: 354px;
+	margin-left: 3px;
+	margin-top: 0px;
+	height: 40px;
+	color: white;
+	background: #696CB9;
+	
+
+
+}
+.back1{
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	float: left;
+}
+.back2{
+	font-size: 25px;
+	float: left;
+	margin-top: 7px;
+	text-align: right;
+	height: 30px;
+	color: #FFDD00;
+	
+	width:150px;
+}
+.back3{
+	font-size: 20px;
+	float: right;
+	margin-right: 15px;
+	margin-top: 7px;
+	text-align: center;
+	height: 30px;
+	width: 100px;
+	
+}
+.board{
+	height: 40px;
+	width: 354px;
+	margin: 3px;
+    font-size: 30px;
+
+}
+.detail{
+	height: 35px;
+	width: 150px;
+	font-size: 20px;
+	margin: 3px;
+	float: left;
+}
+.order_id{
+	height: 35px;
+	width: 130px;
+	font-size: 20px;
+	margin: 3px;
+	float: right;
+}
+.head{
+	height: 26px;
+	width: 354px;
+	margin: 3px;
+    font-size: 30px;
+
+}
+.product{
+	height: 25px;
+	width: 115px;
+	float: left;
+	font-size: 15px;
+	text-align: center;
+	background: #AEA9A9;
+}
+.quantity{
+	height: 25px;
+	width: 80px;
+	float: left;
+	font-size: 15px;
+	text-align: center;
+	background: #AEA9A9;
+}
+.price{
+	height: 25px;
+	width: 72px;
+	font-size: 15px;
+	text-align: center;
+	float: left;
+	
+}
+.amount{
+	height: 25px;
+	width: 77px;
+	font-size: 15px;
+	text-align: center;
+	float: left;
+	
+}
+.rupee{
+	height: 20px;
+	margin-right: 10px;
+	width: 20px;
+	float: right;
+	margin-top: 2px;
+}
+.rupee1{
+	height: 20px;
+	width: 20px;
+	float: right;
+	margin-top: 2px;
+}
+.product1{
+	height: 30px;
+	width: 354px;
+	font-size: 17px;
+	margin-top: 10px;
+	float: left;
+	border: none;
+	border-bottom: 0.5px solid black;
+	border-top: 0.5px solid black;
+	
+}
+.product2,.product3,.product4{
+	height: 30px;
+	width: 354px;
+	font-size: 17px;
+	margin-top: 10px;
+	float: left;
+	border: none;
+	border-bottom: 0.5px solid black;
+	
+}
+
+.detail1{
+	height: 30px;
+	width: 60px;
+	float: left;
+}
+.pro1{
+	height: 30px;
+	width: 130px;
+	font-size: 17px;
+	text-align: center;
+	float: left;
+}
+.price1{
+	height: 30px;
+	width: 40px;
+	margin-left: 5px;
+	font-size: 17px;
+	text-align: center;
+	float: left;
+}
+.quantity1{
+	height: 30px;
+	margin-left: 10px;
+	width: 20px;
+	font-size: 17px;
+	float: left;
+	text-align: center;
+}
+.amount1{
+	height: 30px;
+	width: 70px;
+	font-size: 17px;
+	float: left;
+	text-align: center;
+}
+.total{
+	height: 30px;
+	width: 354px;
+	font-size: 20px;
+	float: left;
+	margin-left: 3px;
+	margin-top:15px;
+}
+.totala{
+	height: 30px;
+	width: 120px;
+	float: right;
+	font-size: 20px;
+
+}
+.orderaccept{
+	height: 30px;
+	width: 100px;
+	border: 1px solid black;
+	float: left;
+	font-size: 17px;
+	padding-top: 4px;
+	padding-left: 3px;
+	margin-top: 50px;
+	background: #2999E4;
+	color: white;
+	margin-left: 125px;
+	border-radius: 5px;
+}
+.bottom{
+	height: 60px;
+	width: 354px;
+	bottom: 0;
+	position: fixed;
+	margin-left: 2px;
+	border: 1px solid black;
+	float: left;
+}
+.additem,.inventory,.orderlist,.myaccount{
+	height: 60px;
+	width: 88.5px;
+	font-size: 13px;
+	
+	float: left;
+}
+.img{
+	height: 40px;
+	width: 40px;
+	float: left;
+	margin-left: 24.25px;
+}
+.text{
+	height: 10px;
+	width: 88.5px;
+	float: left;
+	padding-top: 1.5px;
+	text-align: center;
+}

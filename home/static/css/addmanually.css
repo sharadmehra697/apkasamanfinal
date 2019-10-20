@@ -1,0 +1,162 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+.back{
+	width: 354px;
+	margin-left: 3px;
+	margin-top: 3px;
+	height: 40px;
+	color: white;
+	background: #B779D8;
+	
+
+
+}
+.back1{
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	float: left;
+}
+.back2{
+	font-size: 25px;
+	float: left;
+	margin-top: 7px;
+	text-align: center;
+	height: 30px;
+	width:250px;
+}
+.img{
+	margin-top: 50px;
+	margin-left: 100px;
+	width: 160px;
+	height: 200px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.catogory,.company{
+	margin-left: 10px;
+	margin-top: 20px;
+	height: 20px;
+	width: 70px;
+	font-size: 100%;
+	}
+.product{
+	margin-left: 10px;
+	margin-top: 20px;
+	height: 20px;
+	width: 100px;
+	font-size: 100%;
+	}
+	.stateselect{
+		height: 40px;
+		width: 330px;
+		
+	}
+select{
+	margin: 8px;
+	height: 40px;
+		width: 330px;
+		border-radius: 3px;
+}
+.productitem{
+	margin: 8px;
+	height: 40px;
+		width: 330px;
+		
+		border-radius: 3px;
+}
+.text1{
+	height: 35px;
+	width: 330px;
+	border: 1px solid #696CB9;
+	border-radius: 3px;
+}
+.specification{
+	height: 20px;
+	width: 354px;
+	float: left;
+	margin-top: 30px;
+	font-size: 16px;
+}
+.weight{
+	height: 20px;
+	width: 100px;
+	float: left;
+}
+.price,.Quantity{
+	height: 20px;
+	width: 80px;
+	float: left;
+	margin-left: 40px;
+}
+.Entry{
+	height: 40px;
+	width: 354px;
+	float: left;
+	
+	margin-top: 10px;
+	font-size: 15px;
+	border-radius: 3px;
+}
+.w,.p,.q{
+	height: 30px;
+	width: 70px;
+	border: 1px solid black;
+	float: left;
+	border-radius: 3px;
+}
+.weighte{
+	height: 30px;
+	width: 130px;
+	border: none;
+	float: left;
+	border-radius: 3px;
+}
+.pricee{
+	height: 30px;
+	width: 100px;
+	float: left;
+	margin-top: 0px;
+	
+	margin-left: 5px;
+	border-radius: 3px;
+}
+.Quantitye{
+	height: 30px;
+	width: 80px;
+	float: left;
+	margin-top: 0px;
+	margin-left: 20px;
+	border-radius: 3px;
+}
+.description{
+	margin-left: 10px;
+	margin-top: 30px;
+	height: 20px;
+	width: 70px;
+	font-size: 100%;
+	}
+.des{
+	height: 100px;
+	width: 330px;
+	margin-left: 10px;
+	margin-top: 20px;
+	border: 1px solid #696CB9;
+	border-radius: 3px;
+	margin-bottom: 150px;
+}	
+.add_to_in{
+	height: 40px;
+	width: 354px;
+	margin-left: 3px;
+	margin-top: 6px;
+	color: white;
+	bottom: 0;
+	position: fixed;
+	background: #2999E4;
+	text-align: center;
+	font-size: 20px;
+	padding-top: 5px;
+}

@@ -1,0 +1,271 @@
+
+.main{
+	background: #2999E4;
+	width: 355px;
+	height: 60px;
+  margin-left: -5px;
+  margin-top: -5px;
+}
+.nav,.icon{
+	width: 50px;
+	height: 50px;
+	
+	margin: 5px;
+	float: left;
+}
+.noti{
+	width: 30px;
+	height: 30px;
+	margin-top: 15px;
+	margin-right: 10px;
+	float: right;
+}
+.back{
+	height: 40px;
+	width: 100%;
+	margin-left: -8px;
+
+}
+.path{
+	height: 40px;
+	width: 100%;
+	font-size: 25px;
+}
+.add1{
+	height: 100px;
+	width: 340px;
+	border: 1px solid black;
+
+}
+.add11{
+	margin-top: 5px;
+	height: 100px;
+	width: 280px;
+	float: left;
+    
+}
+.add12{
+	margin-top: 5px;
+	height: 30px;
+	width: 30px;
+	float: right;
+	
+}
+.enter{
+	height: 40px;
+	width: 340px;
+	border-radius: 5px;
+	color: white;
+	float: left;
+	background: #FF6969;
+	border: 1PX solid black;
+
+}
+.plus{
+	height: 20px;
+	width: 20px;
+	border-radius: 20px;
+	background: #FF9595;
+	margin-top: 10PX;
+	float: left;
+	margin-left: 100px;
+}
+.t{
+	height: 20px;
+	width: 200px;
+	background: #FF6969;
+	color: white;
+	margin-top: 10px;
+	margin-left: 10px;
+	float: left;
+
+}
+.t2,.t3,.t4,.t5,.t6{
+	height: 35px;
+	width: 340px;
+	float: left;
+	margin-top: 10px;
+	font-size: 20px;
+	border: 1px solid black;
+
+}
+.t1{
+	height: 35px;
+	width: 340px;
+	margin-top: 10px;
+	float: left;
+	font-size: 25px;
+	
+
+}
+.t51{
+	height: 35px;
+	width: 35px;
+	float: right;
+
+}
+.t7{
+	height: 50px;
+	width: 340px;
+	margin-top: 360px;
+	border: 1px solid black;
+
+}
+.t71{
+    height: 40px;
+    width: 170px;
+    float: left;
+    background: white;
+}
+.t72{
+	height: 40px;
+	width: 170px;
+	float: left;
+	background:#2999E4; 
+	color:white;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 20px;
+
+}
+.t711{height: 35px;
+width: 35px;
+margin-left: 40px;
+margin-top: 7px;
+float: left;
+}
+.t712{
+	height: 20px;
+	width: 80px;
+	margin-top:12px;
+	float: left;
+	font-size: 20px;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+.apka_head{
+ width:360px;
+ height:100px;
+ background-color: #B779D8;
+}
+.apka_first{
+ width:360px;
+ height:50px;
+}
+.sidenav {
+  height: 100%;
+  width: 0; 
+  position: fixed; 
+  z-index: 2;
+  background-color: whitesmoke; 
+  overflow-x: hidden;
+  padding-top: 60px; 
+  transition: 0.5s; 
+}
+
+.sidenav a {
+  padding: 2px 8px 4px 4px;
+  text-decoration: none;
+  font-size: 18px;
+  color: crimson;
+  display: block;
+  transition: 0.3s;
+  float: left;
+}
+.sidenav img{
+float: left;
+width: 25px;
+height: 25px;
+}
+.apka_bar_sidenav_detail{
+	width:260px;
+	height:20px;
+	margin-left: 15px;
+}
+
+.sidenav a:hover {
+  color: red;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  margin-top: -10px;
+  color: red;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 60px;
+}
+.apka_bar_up{
+	position: absolute;
+	width:260px;
+	height: 150px;
+	margin-top: -60px;
+	background-color: dodgerblue;
+
+}
+.apka_bar_detail{
+	width:170px;
+	height: 110px;
+	margin-top: 30px;
+	margin-left: 40px;
+}
+.apka_bar_detail img{
+	margin-left: 60px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.apka_bar_text{
+	font-size: 18px;
+	text-align: center;
+	color: white;
+}
+.nav{
+  display: block;
+  float: left;
+}
+span #a{
+  margin-top: 15px;
+}
+span .bar{
+  display: block;
+     width: 25px;
+     height: 5px;
+     background: #151719;
+     margin-top: 3px;
+     margin-left: 5px;
+}
+
+.apka_dis{
+	width: 60px;
+	height:45px;
+    margin: 3px 0px 0px 10px;
+}
+.apka_head_dis{
+	width: 30px;
+	height:30px;
+	margin-top: 8px;
+	margin-left: 17px;
+}
+.apka_head_notify{
+	width: 30px;
+	height:30px;
+	margin-left: 110px;
+	margin-top: 10px;
+}
+.apka_head_cart{
+	width: 50px;
+	height:37px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+.apka_search{
+	width:340px;
+	height: 30px;
+	background-color: white;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-top: 12px;
+}

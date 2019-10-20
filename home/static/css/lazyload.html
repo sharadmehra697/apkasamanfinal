@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div {
+  margin:30px;
+}
+
+.thumb {
+  text-align: center;
+  width: 360px;
+  height: 267px;
+  display: inline-block;
+  padding: 100px 100px;
+}
+
+img {
+  padding:10px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+	</style>
+</head>
+<body>
+  <article class="thumb">
+    <img class="lozad" data-src="https://www.setaswall.com/wp-content/uploads/2017/03/Planet-4K-Ultra-HD-Wallpaper-3840x2160-768x432.jpg" />
+  </article>
+  <article class="thumb">
+    <img class="lozad" data-src="https://apoorv.pro/lozad.js/demo/images/thumbs/02.jpg" />
+  </article>
+  <article class="thumb">
+    <img class="lozad" data-src="https://apoorv.pro/lozad.js/demo/images/thumbs/03.jpg" />
+  </article>
+  <article class="thumb">
+    <img class="lozad" data-src="https://apoorv.pro/lozad.js/demo/images/thumbs/04.jpg" />
+  </article>
+  <article class="thumb">
+    <img class="lozad" data-src="https://apoorv.pro/lozad.js/demo/images/thumbs/05.jpg" />
+  </article>
+  <article class="thumb">
+    <img class="lozad" data-src="https://apoorv.pro/lozad.js/demo/images/thumbs/06.jpg" />
+  </article>
+  <article class="thumb">
+    <img class="lozad" data-src="https://apoorv.pro/lozad.js/demo/images/thumbs/07.jpg" />
+  </article>
+  <article class="thumb">
+    <img class="lozad" data-src="https://wallpapercave.com/wp/wp2829313.jpg" />
+  </article>
+  <article class="thumb">
+    <img class="lozad" data-src="https://images.unsplash.com/photo-1487252015168-776961549aca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1456&q=80" />
+  </article>
+  <article class="thumb">
+    <img class="lozad" data-src="https://images.unsplash.com/photo-1468956332313-2dcf1542828f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" />
+  </article>
+  <article class="thumb">
+    <img class="lozad" data-src="https://wallpapercave.com/wp/wp2589374.jpg" />
+  </article>
+  <article class="thumb">
+    <img class="lozad" data-src="https://wallpapercave.com/wp/wp2119140.jpg" />
+  </article>
+
+
+<!-- IntersectionObserver polyfill -->
+<script src="https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js"></script>
+
+<!-- Lozad.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/lozad"></script>
+<script type="text/javascript">
+	// Initialize library
+lozad('.lozad', {
+    load: function(el) {
+        el.src = el.dataset.src;
+        el.onload = function() {
+            el.classList.add('fade')
+        }
+    }
+}).observe()
+</script>
+
+</body>
+</html>

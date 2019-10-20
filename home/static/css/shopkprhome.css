@@ -1,0 +1,962 @@
+.apka_shop_top_body{
+	background-color: #32C1C6;
+	height: 28px;
+	width: 100%;
+}
+.apka_shop_top_search{
+	width: 90%;
+	height: 90%;
+	float: left;
+	margin-left: 2%;
+	border-radius: 5px;
+	background-color: white;
+}
+.apka_shop_top_menu{
+	width: 5%;
+	float: right;
+	height: 100%;
+	margin-right: 1.4%;
+	margin-top: -1%;
+}
+.apka_shop_top_menu img{
+	width: 100%;
+	height: 100%;
+}
+.apka_shop_bottom_content{
+  color: black;
+  width: 100%;
+  display: none;
+  overflow: hidden;
+  overflow-y: scroll;
+
+}
+.apka_shop_bottom{
+	height: 60px;
+	width: 100%;
+	bottom: 0;
+	position: fixed;
+	float: left;
+}
+.apka_shop_bottom_nav_data{
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+.apka_shop_bottom_image{
+  height: 50%;
+  width: 36%;
+  float: left;
+  margin-left: 32%;
+  padding-top: 4px;
+}
+.apka_shop_bottom_image img{
+	width: 100%;
+	height: 100%;
+}
+.apka_shop_bottom_text{
+  height: 50%;
+  width: 100%;
+  float: left;
+  text-align: center;
+  font-size: 11px;
+  padding-top: 6px;
+  color: black;
+  font-weight: bold;
+}
+.apka_shop_product_edit{
+	width: 100%;
+	height: 50px;
+	background-color: grey;
+	bottom: 0;
+	position: fixed;
+	display: none;
+}
+.apka_shop_product_edit_quantity{
+	width: 31%;
+	border-right: 1px solid black;
+	height: 100%;
+	float: left;
+}
+.apka_shop_product_edit_text{
+	width: 95%;
+	height: 35%;
+	font-size: 14px;
+	padding-left: 5%; 
+	margin-top: 1px;
+	margin-left: 2px;
+}
+.apka_shop_product_edit_image{
+	width: 100%;
+	height: 65%;
+}
+
+#quant{
+	background-color: orange;
+	border:none;
+	width: 50px;
+	height: 20px;
+	text-align: center;
+	margin-left: 5px;
+	margin-top: 3px;
+}
+#quantadd{
+	border: none;
+	width: 40px;
+	font-size: 13px;
+	padding: 3px 0px;
+}
+.apka_shop_product_edit_options{
+	width: 17%;
+	height: 100%;
+	float: left;
+}
+.apka_shop_product_edit_options_image{
+	width: 50%;
+	height: 50%;
+	margin-left: 25%;
+	margin-top: 10%;
+}
+.apka_shop_product_edit_options_image img{
+	width: 100%;
+	height: 100%;
+}
+.apka_shop_product_edit_options_text{
+	margin-top: 3%;
+	width: 100%;
+	height: 30%;
+	font-weight: bold;
+	text-align:center;
+	font-size: 13px;
+}
+.apka_shop_product_edit_more{
+	width: 40%;
+	height: 75px;
+	right: 0;
+	position: fixed;
+	bottom: 50px;
+	display: none;
+	background-color: lightgray;
+}
+.apka_shop_product_edit_more_10{
+	width: 100%;
+	height: 50%;
+	border-bottom: 1px solid black;
+}
+.apka_shop_product_edit_more_11{
+	float: left;
+	padding:4% 10%;
+	font-size: 18px;
+	font-weight: bold;
+}
+.apka_shop_product_edit_more_12{
+	float: right;
+	width: 15%;
+	margin-top:5%;
+	height: 60%;
+	margin-right: 7%;
+}
+.apka_shop_product_edit_more_12 img{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	overflow-y: hidden; 
+}
+.apka_shop_product_info{
+	background-color: rgba(0,0,0,.5);
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	visibility: hidden;
+}
+a:link,
+a:visited{
+	text-decoration: none;
+}
+#apka_shop_product_info_pop:target{
+	opacity:1;
+	visibility: visible;
+}
+#apka_shop_product_info_pop:target .mdatac{
+	opacity: 1;
+	visibility: visible;
+}
+#apka_shop_product_edit_pop:target{
+	opacity:1;
+	visibility: visible;
+}
+#apka_shop_product_edit_pop:target .mdatac{
+	opacity: 1;
+	visibility: visible;
+}
+.apka_shop_product_info_body{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 10%;
+	height: 80%;
+	background-color: white;
+}
+.apka_shop_product_info_body_10{
+	background-color: #0D7DDA;
+	width: 100%;
+	height: 10%;
+}
+.apka_shop_product_info_body_11{
+	width: 12%;
+	height: 50%;
+	float: left;
+	padding-top: 3.5%;
+	margin-left: 2%;
+}
+.apka_shop_product_info_body_11 img{
+	width: 100%;
+	height: 100%;
+}
+.apka_shop_product_info_body_12{
+	float: left;
+	padding: 3.7% 10%;
+	font-size: 22px;
+	font-weight: bold;
+	color: white;
+	margin-left: 8%;
+}
+.swiper-container.apka_shop_product_info_body_20 {
+      width:40%;
+      height: 25%;
+      border:1px solid blue;
+      margin-top: 2%;
+    }
+    
+     .swiper-pagination{
+      margin-top: -200px;
+    }
+.apka_shop_product_info_body_30{
+	width: 100%;
+	height: 63%;
+	overflow: hidden;
+	overflow-y: scroll;
+	margin-top: 2px;
+}
+.apka_shop_product_info_body_30 input{
+	background-color: purple;
+}
+.aspi00{
+	width: 90%;
+	height: 15%;
+	padding-top: 2%;
+	float: left;
+	margin-left: 5%;
+	margin-bottom: 1%;
+}
+.aspi00 label,.aspi10 label{
+	padding: 1.5% 4%;
+	font-size: 16px;
+	font-weight: bold;
+}
+.aspi00 input{
+	width: 97%;
+	height: 60%;
+	border:none;
+	border-radius: 2px;
+	padding-left: 3%;
+	font-size: 17px;
+}
+.aspi10{
+	width: 40%;
+	height: 15%;
+	padding-top: 2%;
+	margin-left: 5%;
+	float: left;
+	margin-bottom: 1%;
+}
+.aspi10 input{
+	width: 50%;
+	text-align: center;
+	height: 55%;
+	border:none;
+	border-radius: 2px;
+	padding-left: 3%;
+	font-size: 15px;
+}
+
+.apka_shop_product_delete{
+	width: 80%;
+	height:auto;
+	left: 10%;
+	position: fixed;
+	z-index: 10;
+	bottom: 220px;
+	background-color: gray;
+	display: none;
+}
+.apka_shop_product_delete_00{
+	background-color: red;
+	padding: 2% 2%;
+	font-weight: bold;
+	color: yellow;
+	font-size: 20px;
+	text-align: center;
+}
+.apka_shop_product_delete_10{
+	padding: 6% 8%;
+	font-weight: bold;
+	color: yellow;
+	font-size: 16px;
+	text-align: left;
+}
+.apka_shop_product_delete_20{
+	font-weight: bold;
+	color: yellow;
+	font-size: 16px;
+	text-align: left;
+}
+.apka_shop_product_delete_21,.apka_shop_product_delete_22{
+	width: 50%;
+	padding: 2% 0%;
+	font-weight: bold;
+	float: left;
+	color: yellow;
+	font-size: 16px;
+	text-align: center;
+	background-color: green;
+}
+.apka_shop_product_delete_22{
+	background-color: orange;
+}
+.apka_shop_inventry_more_options{
+	width: 40%;
+	height: 75px;
+	right: 0;
+	position: fixed;
+	top: 148px;
+	display: none;
+	background-color: lightgray;
+}
+/* accordian used to watch the selected items by the shopkeeper */
+.apka_shop_added-list{
+    position: fixed;
+    bottom: 48px;
+    width: 360px;
+}
+.apka_shop_show_added{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px 10px 10px 10px;
+  border-radius: 15px 15px 0 0;
+  width: 339px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 13px;
+  transition: 0.9s;
+  margin-bottom: 15px;
+}
+.apka_shop_show_added span{
+  float: right;
+  margin-right: 5px; 
+}
+
+.active, .apka_shop_show_added:hover {
+  background-color: black; 
+}
+
+.apka_shop_added_items {
+  padding: 0 5px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.apka_shop_added_items button{
+  margin: 10px 50px;
+  border: 1px solid black;
+  border-radius: 15px;
+  color: rgb(255, 153, 0);
+  background-color: white;
+  padding: 5px 55px; 
+}
+/*add item content*/
+.apka_shop_input_name,.apka_shop_input_category{
+	border: none;
+	color: purple;
+	background-color: silver;
+	height: 30px;
+	width: 90%;
+	padding-left: 4%;
+	font-size: 18px;
+	border-radius: 2px;
+	margin:3% 3% 0% 3%;
+}
+.apka_shop_input_category{
+	width: 94%;
+	font-size: 16px;
+	padding-left: 0%;
+}
+.ged{
+   border: 0px solid #444444;
+    height:29%;
+    width: 80%;
+    color:#fff; 
+    padding:40px; 
+    font-size:20px;
+  background:url({%static 'Icons/Group 754.png'%});
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  margin-top: 10px;
+  margin-left: 8px;
+}
+#setPname{
+  font-size: 12px;
+  margin-left: 8px;
+  width: auto;
+  padding: 0px;
+}
+.apka_shop_input_selected_cats{
+	color: black;
+	overflow: hidden;
+	overflow-x: scroll;
+	width: 93%;
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 3%;
+	background-color: gray;
+}
+.apka_shop_cats_first,.apka_shop_cats_second,.apka_shop_cats_third,.apka_shop_cats_fourth{
+	width: 20%;
+	overflow: hidden;
+	text-align: left;
+	overflow-x: scroll;
+	font-size: 14px;
+	float: left;
+	margin:1px;
+	padding: 1%;
+}
+.apka_shop_input_type_body{
+	width: 50%;
+	padding: 0%;
+}
+.apka_shop_category_input{
+	width: 94%;
+	margin-top: 5px;
+	margin-left: 3%;
+}
+.asi00{
+	width: 32%;
+	height: 80px;
+	float: left;
+	margin-left: 1%;
+	margin-bottom: 2%;
+}
+.asi01{
+	background-color: #c1b0b0;
+	width: 95%;
+	padding-left: 5%;
+	padding-top: 3%;
+	font-size: 16px;
+	font-weight: bold;
+	height: 25%;
+	border-radius: 2px 2px 0px 0px;
+
+}
+.asi02{
+	background-color: #e2dbde;
+	width: 97%;
+	padding-left: 3%;
+	height: 72%;
+	font-size: 13px;
+	overflow: hidden;
+	overflow-y: scroll;
+	border-radius: 0px 0px 2px 2px;
+}
+.asi10{
+	width: 40%;
+	height: 80px;
+	float: left;
+	margin-left: 2%;
+	margin-bottom: 2%;
+}
+.asi11{
+	background-color: #c1b0b0;
+	width: 95%;
+	padding-left: 5%;
+	padding-top: 3%;
+	font-size: 14px;
+	font-weight: bold;
+	height: 25%;
+	border-radius: 2px 2px 0px 0px;
+
+}
+.asi12{
+	background-color: #e2dbde;
+	width: 97%;
+	padding-left: 3%;
+	height: 72%;
+	font-size: 13px;
+	overflow: hidden;
+	overflow-y: scroll;
+	border-radius: 0px 0px 2px 2px;
+}
+.asi20{
+	width: 100%;
+	float: left;
+	margin-bottom: 2%;
+}
+.asi21{
+	float: left;
+	width: 98%;
+	background-color: #e4baba;
+	padding-left: 2%;
+	padding-top: 1%;
+	font-size: 12px;
+}
+.asi22{
+	width: 70%;
+	height: 27px;
+	background-color: #c1b0b0;
+	border: none;
+	font-weight: bold;
+	font-size: 14px;
+	border-radius: 2px;
+	margin-top: .5%;
+	margin-left: 1%;
+}
+.asi22 option{
+	background-color: #e2dbde;
+	font-size: 13px;
+}
+.asi22:focus{
+	outline: none;
+}
+.asi30{
+	width: 60%;
+	height: 27px;
+	background-color: #c1b0b0;
+	border: none;
+	font-weight: bold;
+	font-size: 14px;
+	padding-left: 5px;
+	border-radius: 2px;
+	margin-bottom: 1.5%;
+}
+.asi30 option{
+	background-color: #e2dbde;
+	font-size: 13px;
+}
+.asi30:focus{
+	outline: none;
+}
+.asi40{
+	width: 100%;
+	background-color: #c1b0b0;
+	height: 25px;
+	float: left;
+	margin-bottom: 1.5%;
+	border-radius: 2px;
+}
+.asi41{
+	padding-right: 3%;
+	height: 90.5%;
+	padding-left: 2%;
+	font-weight: bold;
+	padding-top: 1%;
+	float: left;
+}
+.asi42{
+	background-color: #e2dbde;
+	height: 85%;
+	font-size: 14px;
+	float: right;
+	padding-top: 1%;
+	padding-right: 2%;
+}
+.asi43{
+	width: 45%;
+	height: 100%;
+	float: right;
+	border-radius: 0px 2px 2px 0px;
+	font-size: 16px;
+	border:none;
+	border-radius: 2px;	
+	padding-left: 2%;
+	background-color: #e2dbde;
+}
+.asi50{
+	width: 60%;
+	background-color: #c1b0b0;
+	height: 25px;
+	float: left;
+	margin-bottom: 1.5%;
+	border-radius: 2px;
+}
+.asi51{
+	padding-right: 3%;
+	height: 90%;
+	padding-left: 3%;
+	font-weight: bold;
+	padding-top: 2%;
+	float: left;
+	font-size: 15px;
+}
+.asi52{
+	background-color: #e2dbde;
+	height: 91%;
+	font-size: 14px;
+	float: right;
+	padding-top: 1%;
+	padding-right: 2%;
+}
+.asi60{
+	float: left;
+	width: 100%;
+}
+.asi61{
+	width: 98%;
+	font-size: 14px;
+	background-color: #e4baba;
+	padding-left: 2%;
+	padding-top: 1%;
+}
+.asi62{
+	width: 98%;
+	height: 25px;
+	border:none;
+	background-color: #c1b0b0;
+	font-size: 15px;
+	padding-left: 2%;
+	border-radius: 2px;
+	margin-bottom: 1.5%;
+}
+input:focus{
+	outline: none;
+}
+input[class=asi62]:focus{
+	background-color: #e2dbde;
+}
+/*for sending data to db*/
+.apka_shop_send_data{
+	width: 40%;
+	height: 30px;
+	border: none;
+	background-color: #e2dbde;
+	margin-left: 30%
+}
+/*for images*/
+.apka_shop_cat_img{
+ width: 100%;
+ height: 200px;
+}
+.apka_shop_cat_img_head{
+	width: 98%;
+	background-color: red;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 1%;
+	margin-bottom: 10px;
+}
+.apka_shop_cat_img_body{
+	width: 95%;
+	margin-left: 1.5%;
+	padding: 1%;
+	height: 40%;
+}
+.apka_shop_verify_images{
+	width: 80%;
+	margin-left: 10%;
+	padding: 1%;
+	height: 30%;
+}
+.apka_shop_verify_uploaded{
+	width: 80%;
+	margin-left: 10%;
+	padding: 1%;
+	height: 25%;
+}
+.apka_shop_verify_images_body{
+	width: 15%;
+	margin-left: 42%;
+	height: 60%;
+	margin-right: 1%;
+}
+.apka_shop_verify_images_type{
+	width: 50%;
+	padding-top: 1%;
+	margin-left: 26%;
+	color: red;
+	height: 30%;
+	text-align: center;
+}
+.apka_shop_verify_uploaded_images{
+	width: 24%;
+	height: 100%;
+	float: left;
+	margin-right: 1%;
+	background:url('/static/Icons/uploaddocument.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.apka_shop_verify_uploaded_close{
+	color: red;
+	width: 24%;
+	float: right;
+	padding: 3%;
+	font-size: 20px;
+	background-color: yellow;
+}
+
+.apka_shop_verify_images_input{
+	border: none;
+	width: 100%;
+	height: 100%;
+	background:url('/static/Icons/uploaddocument.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+/*for item in Toggle*/
+.item_in_toggle{
+  padding: 1%;
+  height: 30px;
+  width: 98%;
+  margin-top: 3px;
+  background-color: gray;
+  margin-bottom: 3px;
+}
+.item_toggle_name{
+  float: left;
+  width: 40%;
+  margin-left: 5px;
+  font-size: 3.3vw;
+  text-align: center;
+}
+.item_toggle_quan{
+  width:15%;
+  text-align: center;
+  float:left;
+  margin-left: 3px;
+  background-color: yellow;
+  padding: 2px;
+}
+.item_toggle_quan input{
+  width:90%;
+  border:none;
+  text-align: center;
+  float:left;
+  font-size: 3.5vw;
+  padding: 2px;
+}
+.item_toggle_price{
+  width:20%;
+  text-align: center;
+  float:left;
+  background-color: yellow;
+  margin-left: 5px;
+  font-size: 3.5vw;
+  padding: 2px;
+
+}
+.item_toggle_price input{
+  width:80%;
+  border:none;
+  text-align: center;
+  float:right;
+  font-size: 3.5vw;
+  padding: 2px;
+  margin-left: 0px;
+}
+.item_toggle_image{
+  width:8%;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  float:left;
+  margin-left: 3px;
+  font-size: 3.5vw;
+  padding: 2px;
+
+}
+.item_toggle_cut{
+  width: 5%;
+  text-align: center;
+  float: left;
+  margin-left: 10px;
+
+}
+.apka_shop_item_search{
+	padding: 5px;
+	margin-top: -17px;
+	width: 87%;
+	margin-left: 6%;
+	background-color: gray;
+	border-radius: 2px;
+	color: orange;
+	font-weight: bold;
+	display: none;
+}
+.apka_shop_item_values{
+	padding-bottom: 2px;
+	padding-left: 7px;
+	padding-top: 2px;
+	border-bottom:.5px solid black;
+}
+.apka_shop_account_00{
+	background-color: yellow;
+	width: 100%;
+	height: 140px;
+}
+.apka_shop_account_00 img{
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.apka_shop_account_10{
+	background-color: gray;
+	width: 88%;
+	margin-left: 6%;
+	border-radius: 2px;
+	height: 80px;
+	z-index: 10;
+	position: absolute;
+	margin-top: -50px;
+}
+.apka_shop_account_11{
+width: 24%;
+padding:0% 3%;
+float: left;
+height: 90%;
+margin-top: 1.2%;
+}
+.apka_shop_account_11 img{
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+}
+.apka_shop_account_12{
+width: 50%;
+float: left;
+height: 92%;
+padding-top: 2%;
+}
+.apka_shop_account_13{
+width: 20%;
+float: right;
+height: 92%;
+padding-top: 2%;
+}
+.apka_shop_account_121{
+	width: auto;
+	padding: 1%;
+	margin-left: 2%;
+	margin-top: 2px;
+	height: 20%;
+	font-size: 16px;
+
+}
+.apka_shop_account_121.name{
+	font-size: 20px;
+	font-weight: bold;
+}
+.apka_shop_account_121.edit{
+	font-size: 18px;
+	font-weight: bold;
+	padding: 12%;
+	margin-right: 2%;
+	background-color: skyblue;
+}
+.apka_shop_account_20{
+	width: 100%;
+	height: 240px;
+	margin-top: 40px;
+	border-top: 1px solid black
+}
+.apka_shop_account_21{
+	width: 100%;
+	height: 15%;
+	padding-top: 1%;
+	border-bottom: 1px solid black
+}
+.apka_shop_account_211{
+	width: 80%;
+	padding: 2%;
+	margin-left: 2%;
+	float: left;
+}
+.apka_shop_account_212{
+	width: 5%;
+	padding: 2%;
+	height: 50%;
+	float: right;
+	margin-right: 1%;
+}
+.apka_shop_account_212 img{
+	width: 100%;
+	height: 100%
+}
+/*shop orders*/
+.asio00{
+	font-size: 17px;
+	padding: 1% 2%;
+	font-weight: bold;
+}
+.asio10{
+	width: 96%;
+	margin-left: 2%;
+	height: 35px;
+	border:none;
+	border:.5px solid gray;
+	border-radius: 2px;
+	padding: 1% 2%;
+	font-size: 17px;
+	background-color: white;
+}
+.asio20{
+	width: 94%;
+	margin-left: 3%;
+	margin-top: 2%;
+	height: auto;
+}
+.asio21{
+	width: 98%;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 1% 1%;
+}
+.asio22{
+	width: 100%;
+	margin-top: 2%;
+}
+.asio220{
+	width: 100%;
+	height: 30px;
+	border:.5px solid gray;
+	margin-bottom: 1.5%;
+}
+.asio221{
+	width: 20%;
+	padding: 1.5% 1%;
+	height: 66%;
+	float: left;
+	font-size: 18px;
+	text-align: center;
+}
+.asio221.time{
+	width: 23%;
+}
+.asio221.item{
+	width: 23%;
+}
+.asio221.rupee{
+	width: 24%;
+}
+.asio221.cats{
+	width: 20%;
+	border-radius: 2px;
+	padding: .3% 0%;
+	height: 74%;
+	margin-top: .8%;
+	margin-left: 2.5%;
+	color: white;
+	background-color: red;
+}

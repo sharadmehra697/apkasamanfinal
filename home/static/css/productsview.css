@@ -1,0 +1,326 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+
+.sha{
+	height: 300px;
+	width:300px;
+	border: 1vh solid red;
+	margin-bottom: 0px;
+}
+.search input(type="text"){
+
+}
+.main{
+	background: #2999E4;
+	width: 360px;
+	height: 100px;
+
+	margin-bottom: 5px;
+}
+.nav,.icon{
+	width: 50px;
+	height: 50px;
+	
+	margin: 5px;
+	float: left;
+}
+.noti,.offers,.cart{
+	width: 30px;
+	height: 30px;
+	margin-top: 15px;
+	margin-right: 10px;
+	float: right;
+	
+
+}
+
+
+.search{
+	width: 100%;
+	position: relative;
+}
+.searchterm{
+	float: left;
+	width: 90%;
+	height: 7px;
+	margin-left: 1.5%;
+	padding: 11px;
+	font-size: 15px;
+	outline: none;
+	transition: 1s all;
+}
+
+.grocery{
+	margin-top: -5px;
+	height: 30px;
+	width: 100%;
+	
+	background:#9E6ED5;
+}
+.g{
+	font-size: 20px;
+	float: left;
+	color: white;
+	padding: 2px;
+}
+.sh{
+	font-size: 20px;
+	float: right;
+	color: white;
+	padding:4px;
+}
+.pan{
+	width: 96.8%;
+	height: 300px;
+	margin: 5px;
+	border-radius: 2px;
+	background: #91B469;
+}
+.pan1{
+	width: 96.8%;
+	height: 350px;
+	margin: 5px;
+	border-radius: 2px;
+	background: #91B469;
+}
+.per1{
+	
+	background: #DEDEDE;
+	width: 98%;
+	margin-top: -4px;
+	height: 22px;
+	float: left;
+}
+.per{
+	text-align:right;
+	height: 20px;
+	margin: 1px;
+	font-size: 14px;
+	width: 220px;
+	float: left;
+
+}
+.view{
+	color: white;
+	float:right;
+	margin-right: 10px;
+	text-align:center;
+	background: red;
+	font-size: 14px;
+	height: 18px;
+	width: 60px;
+	margin: 1px;
+	border-radius: 20px;
+}
+.a1,.a3,.b1,.b3{
+	height: 140px;
+	width: 120px;
+	float: left;
+	margin-left:25px;
+	margin-top: 5px;
+	border-radius: 5px;
+	text-align: center;
+	background: white;
+}
+.a11,.a21,.a31,.a41,.b11,.b21,.b31,.b41{
+	height: 12px;
+	width: 40px;
+	margin: 2px;
+	background: red;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+	float: right;
+
+}
+.a2,.a4,.b2,.b4{
+	height: 140px;
+	width: 120px;
+	margin-right: 25px;
+	float: right;
+	margin-top: 5px;
+	border-radius: 10px;
+	text-align: center;
+	background: white;
+}
+.open{
+	color: green;
+	float: left;
+	height: 20px;
+	width: 60px;
+
+
+}
+.rating{
+	text-align: center;
+	height: 25px;
+    
+	margin-top: 0px;
+	float: right;
+	
+	width: 180px;
+
+}
+.c12,.c22,.c32,.c42{
+	float: left;
+	height: 20px;
+	width: 120px;
+}
+.shopleft{
+	height: 180px;
+	width: 160px;
+	
+	font-size: 17px;
+	float: left;
+	margin-left:10px;
+	margin-top: 5px;
+	
+	text-align: center;
+	background: white;
+}
+.shopright{
+	height: 180px;
+	width: 160px;
+	
+	font-size: 17px;
+	margin-right: 10px;
+	float: right;
+	margin-top: 5px;
+	
+	text-align: center;
+	background: white;
+}
+.pan2{
+	width: 99%;
+	height: 375px;
+	margin: 2px;
+	margin-top: 30px;
+	border-radius: 0px;
+	background: white;
+	
+}
+.explore{
+	height: 16px;
+	width: 65px;
+	margin-top: 22px;
+	margin-right: 5px;
+	font-size: 15px;
+	background: red;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+	float: right;
+}
+.imgshop{
+	height: 70px;
+	width: 70px;
+	margin-left: 3px;
+	
+	float: left;
+
+}
+.productname{
+	height: 70px;
+	width: 75px;
+	font-size: 13px;
+	margin-left: 5px;
+	
+	float: left;
+	
+}
+
+
+.recommended{
+	height: 160px;
+	width: 99%;
+	margin-left: 0.5%;
+	border-radius: 5px;
+	background: grey;
+}
+.product{
+	height: 140px;
+	width: 98%;
+	float: left;
+	box-shadow: 1px 1px 1px 1px grey;
+	background: white;
+	margin-left: 1%;
+	border-radius: 5px;
+	margin-top: 0px;
+
+}
+.rate{
+	height: 17px;
+	width: 40px;
+	float: right;
+	margin: 4px;
+	
+	color: white;
+	font-size: 14px;
+	background: red;
+	border-radius: 20px;
+}
+.rate img{
+	float: left;
+	height: 14px;
+	margin-left: 2px;
+	width: 15px;
+
+}
+.img1{
+	height: 100px;
+	width: 80px;
+	float: left;
+	
+	margin-left: 10px;
+	margin-top: 20px;
+}
+.img1 img{
+	height: 100px;
+	width: 80px;
+}
+.name{
+	width: 200px;
+	height: 40px;
+	float: left;
+	
+	margin-left: 10px;
+	margin-top: 30px;
+}
+.bottom{
+	width: 250px;
+	height: 30px;
+	margin-top: 20px;
+	float: left;
+	
+}
+.quantity{
+	margin-left: 5px;
+	margin-top: 3px;
+	float: left;
+}
+.q{
+	margin-top: 3px;
+	margin-left: 20px;
+	
+	float: left;
+}
+.addtocart{
+	margin-top: 3px;
+	color: white;
+	margin-left: 20px;
+	background: #6809B6;
+	float:right;
+	padding-top: 0px;
+	border-radius: 4px;
+	font-size: 13px;
+	height: 18px;
+	width: 65px;
+}
+.polaroid{
+	height: 54px;
+	width: 160px;
+	margin-top: 150px;
+	margin-left: -20px;
+}

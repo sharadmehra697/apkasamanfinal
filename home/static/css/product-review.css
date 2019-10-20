@@ -1,0 +1,369 @@
+body {font-family: Verdana, sans-serif; margin:0;padding: 0;}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* product review title */
+.product-review-title{
+    background-color: aquamarine;
+    padding: 0;
+}
+.prod-review-title-backbtn, .prod-review-title-para{
+    display: inline-block;
+}
+.prod-review-title-backbtn{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bolder;
+}
+.prod-review-title-para{
+    text-align: center;
+    margin: 10px 10px 10px 3px;
+    font-size: 17px;
+    width: 305px;
+}
+
+/* product review image */
+.prod-review-img{
+    height: 180px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* product prices */
+.product-prices{
+    height: 92px;
+    margin-top: 20px;
+}
+.product-prices p{
+    margin: 0 0 0 10px;
+}
+.product-prices-current-price{
+    color: rgb(180, 180, 1);
+    font-size: 25px;
+}
+.product-prices-offer-para{
+    color: rgb(131, 1, 1);
+    font-size: 15px;
+    padding-top:5px;
+}
+.product-prices-offer-price{
+    color: rgb(255, 7, 7);
+    font-size: 25px;
+    padding-top:5px;
+}
+
+/* product quantity */
+.product-quantity{
+    margin-top: 20px;
+    height: 60px;
+}
+.product-quantity p{
+    margin: 0 0 0 10px;
+    font-size: 18px;
+}
+.product-quantity-slide{
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.product-quantity-slide span{
+    padding: 0 5px;
+}
+
+/* prod details */
+.prod-details{
+    margin-top: 20px;
+    margin-left: 10px;
+    color: #494949;
+}
+
+/* product share */
+.prod-share{
+    margin-top: 20px;
+    background-color: rgb(231, 228, 228);
+}
+.prod-share-title{
+    height: auto;
+    background-color: rgb(6, 164, 204);
+}
+.prod-share-title p, .prod-share-title a{
+    display: inline-block;
+    margin: 0;
+}
+.prod-share-title p{
+    float: left;
+    padding: 10px 250px 10px 10px;
+    color: white;
+}
+.prod-share-title a{
+    padding: 10px 10px;
+    color: aqua;
+    text-decoration: none;
+    font-size: 16px;
+}
+.prod-share-body{
+    padding: 20px;
+}
+.prod-share-body a{
+    color: green;
+}
+.prod-share-body-input{
+}
+
+/* products ratings */
+.prod-rating{
+    margin-top: 20px;
+    height: 200px;
+}
+.prod-rating-title{
+    margin-left: 10px;
+}
+.prod-rating-bars, .prod-rating-total-stars{
+    display: inline-block;
+    margin-top: 10px;
+}
+.prod-rating-bars{
+    width: 240px;
+    margin-top: 20px;
+    height: 160px;
+    position: absolute;
+}
+.prod-rating-bar{
+    margin: 5px;
+    margin-top: 8px;
+}
+.prod-rating-bar-1, .prod-rating-bar-2, .prod-rating-bar-3{
+    display: inline-block;
+}
+.prod-rating-bar-2{
+    width: 120px;
+    margin-bottom: 3px;
+    border-radius: 2px;
+    border: 1px solid black;
+    background-color: black;
+    height: 5px;
+}
+.prod-rating-total-stars{
+    margin-left: 245px;
+    margin-top: 20px;
+    width: 105px;
+    height: 160px;
+}
+.prod-rating-total-stars-content{
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 28px;
+    border-radius: 50%;
+    padding: 10px 10px;
+}
+
+/* product seller informations */
+.prod-seller-info{
+    height: 130px;
+    margin-top: 20px;
+}
+.prod-seller-info-title{
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+.prod-seller-info-shop-icon, .prod-seller-info-shop-name{
+    display: inline-block;
+    position: absolute;
+}
+.prod-seller-info-shop-icon img{
+    margin: 13px 13px 13px 25px;
+}
+.prod-seller-info-shop-name{
+    margin-left: 100px;
+    margin-top: 5px;
+    width: 250px;
+}
+.prod-seller-info-shop-name p{
+    margin: 10px 5px 10px 5px;
+    font-size: 14px;
+}
+
+/* prod-similar-porducts */
+.prod-similar-products{
+    margin: 30px 5px 15px 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: auto;
+    background-color: rgb(1, 68, 68);
+}
+
+/* prod review mgs */
+.prod-review-mgs{
+    margin-top: 20px;
+    height: 100%;
+}
+.prod-review-mgs-title{
+    margin-left: 10px;
+    font-size: 18px;
+}
+/* add items list styling */
+.add-item-lists{
+    width: 358px;
+    height: 100%;
+  }
+  .add-item-count{
+    border: 1px solid black;
+    width: 357px;
+    height: 140px;
+    margin-top: 10px;
+  }
+  .add-item-img, .item-details{
+    display: inline-block;
+  }
+  .add-item-img{
+    width: 95px;
+    height: 120px;
+    float: left;
+    margin: 10px;
+  }
+  .add-item-img-content, .add-item-img p{
+    display: inline;
+  }
+  .add-item-img-content{
+    margin-bottom: 0;
+  }
+  .item-details{
+    margin: 10px 10px 10px 0;
+    float: right;
+    width: 231px;
+    height: 120px;
+  }
+  .item-details-1{
+    background-color: #cccccc;
+    border-radius: 3px;
+    margin-bottom: 5px;
+  }
+  .item-details-2{
+    background-color: #cccccc;
+    border-radius: 3px;
+    margin-bottom: 5px;
+  }
+  .item-details-3{
+    background-color: #cccccc;
+    border-radius: 3px;
+    margin-bottom: 5px;
+  }
+.item-details-list{
+    margin-top: 12px;
+}
+
+
+/* slideshow product reviews  */
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+  .mySlides{
+    height: 100%;
+    width: 360px;
+    position: relative;
+    
+}
+.myslide-title{
+    padding-left: 6px;
+    padding: 5px;
+    color: white;
+}
+.container-slideshow-1{
+    margin-top: 0;
+    padding: 5px 0 10px 0;
+}
+.content{
+    display: inline-block;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 30%;
+    margin: 6px 3px;
+    height: 128px;
+}
+.container-img{
+    position: absolute;
+    width: 30%;
+    height: 90px;
+}
+.container-para{
+    position: absolute;
+    text-align: center;
+    padding-top: 4px;
+    width: 30%;
+    top: 98px;
+    height: 35px;
+}

@@ -1,0 +1,110 @@
+.myorders{
+	border: 1px solid black;
+	background-color: purple;
+	font-size: 28px;
+	font-style: bold;
+	height: 50px;
+	width: 358px;
+	
+}
+
+.arrow{
+	margin-top: 7px;
+	float: left;
+}
+.heading1{
+	
+	height: 20px;	
+	margin-top: 10px;
+	margin-left: 100px;
+	float: left;
+}
+
+.outerdiv1{
+
+	height: 0px;
+	width: 358px;
+}
+.profileimg img{
+
+	width: 100px;
+	height: 120px;
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+}
+.form1{
+	padding: 5px;
+
+	float:left;
+	width: 230px;
+}
+.f1{	
+	margin-top: 15px;
+	margin-left: 10px;
+	font-size: 24px;
+
+	
+}
+.f1 input{
+	padding: 8px;
+	width: 200px;
+	color: grey;
+	border-radius: 2px;
+	background: 
+	/*background: url(view.png) no-repeat scroll 7px 7px;*/
+	background-position: right;
+	background: url({%static 'img/edit.png' %}) no-repeat scroll 7px 7px;
+	background-position: right;
+}
+
+
+
+
+.form2{
+
+	font-size: 24px;
+	padding: 5px;
+	
+}
+.outerdiv2{
+
+	height: 160px;
+	width: 358px;
+}
+.f{	
+
+	width: 200px;
+}
+.f input{
+	padding: 8px;
+	width: 325px;
+	border-radius: 2px;
+	color: grey;
+	background: url({%static 'img/edit.png' %}) no-repeat scroll 7px 7px;
+	background-position: right;
+	
+}
+.div3{
+	font-size: 18px;
+	height: 20px;
+	width: 150px;
+	color: red;
+	margin-left: 5px;
+	margin-top:10px;
+
+}
+
+.divb{
+	margin-top: 20px;
+	height: 30px;
+}
+.divb button{
+	background-color: blue;
+	color: white;
+	font-size: 20px;
+	border-radius: 3px;
+	border: 1px solid black;
+	height: 30px;
+	width: 358px;
+}

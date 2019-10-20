@@ -1,0 +1,600 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.Apka_head_main{
+	height: 100px;
+	width:99%;
+	padding-top: 1%;
+	padding-left: 1%;
+	background-color: #18b2fe;
+}
+.Apka_head_one{
+	position: absolute;
+	height: 14%;
+	width:9%;
+	float: left;
+}
+.Apka_head_one img{
+	height:100%;
+	width: 100%;
+	position: relative;
+}
+.Apka_head_two{
+	width: 60%;
+	background-color: #388BF5;
+	margin-top: 1%; 
+	position: absolute;
+	float: left;
+	margin-left: 34%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 3%;
+	border-radius:5px;
+}
+.Apka_head_two input[type="text"],.Apka_head_two input[type="password"]{
+width: 35%;
+position: relative;
+height: 22px;
+border:none;
+border: 1px solid gray;
+border-radius: 5px;
+padding-left: 10px;
+}
+.Apka_head_two input[type="submit"]{
+	width: 13%;
+	position: relative;
+	height:25px;
+	border: none;
+	border: 1px solid purple;
+	background-color: purple;
+	color: white;
+	border-radius: 5px;
+	margin-left: 1%;
+}
+.Apka_head_nav{
+	width: 99%;
+	position: absolute;
+	padding-top: .4%;
+	padding-bottom: .4%;
+	margin-top: .1%;
+	padding-left: 1%;
+	background-color: gray;
+}
+.Apka_head_nav a{
+	height: 100%;
+	text-decoration: none;
+	position: relative;
+	font-size: 2vw;
+	padding-left: 3%;
+	padding-right: 2%;
+	color: white;
+}
+    
+    .shophead{
+    	width: 99.5%;
+    	height: 60px;
+    	background: #535055;
+    	float: left;
+    	margin-top: 45px;
+    	margin-left: 0.25%;
+    }
+     .shopimg{
+    	height: 60px;
+    	width: 60px;
+    	margin-left: 35px;
+    	margin-top: -50px;
+    	float: left;
+    }
+    .shopimg img{
+    	height: 80px;
+    	width: 80px;
+    	float: left;
+    	
+    	border:8px solid white;
+    	border-radius: 5px;
+    }
+    
+    .shopname{
+    	height: 20px;
+    	width: 250px;
+    	font-size: 20px;
+    	margin-top: 10px;
+    	margin-left: 140px;
+      
+    	float: left;
+    	color: white;
+    }
+    .shoptagline{
+    	height: 15px;
+    	width: 150px;
+    	color: orange;
+    	font-size: 15px;
+    	float: left;
+    	
+    	margin-top: 30px;
+    	margin-left: -250px;
+    }
+    .shopshare{
+    	height: 10px;
+    	width: 10px;
+    	float: right;
+    	border: 1px solid red;
+    }
+    .shopshare img{
+    	height: 20px;
+    	width: 20px;
+    	background: #535055;
+    	float: right;
+
+    }
+        .shopdetail{
+        	width: 99.5%;
+    	    height: 60px;
+    	    margin-left: 0.25%;
+    	    background: white;
+    	    box-shadow: 1px 1px 1px 1px #A9A9A8;
+    	    float: left;
+    	   
+        }
+        .stars{
+        	height: 20px;
+        	width: 130px;
+        	margin-left: 160px;
+        }
+        .stars img{
+               height: 20px;
+               width: 20px;     
+        }
+        .open{
+           color: green;
+           height: 15px;
+           width: 30px;
+           margin-left: 160px;
+        }
+        .offer{
+        	height: 30px;
+        	width: 500px;
+        	color: white;
+            background: #FCC407;
+            float: left;
+            margin-left: 450px;
+            margin-top: -20px;
+        }
+        .offerdetail{
+        	height: 20px;
+        	width: 200px;
+        	float: left;
+        	margin-top: 3px;
+        	font-size: 20px;
+
+        }
+        .usepromocode{
+        	height: 10px;
+        	width: 80px;
+        	float: left;
+        	color: red;
+        	font-size: 10px;
+        	margin-top: 10px;
+        }
+        .promocode{
+        	height: 18px;
+        	width: 50px;
+        	color: black;
+        	float: right;
+        	margin-right: 10px;
+        	margin-top: 5px;
+        	background: white;
+        }
+        .call{
+        	height: 25px;
+        	width: 60px;
+        	font-size: 20px;
+        	float: right;
+        	margin-top: -20px;
+        	margin-right: 50px;
+        	border: 1px solid black;
+        	background: #3D950A;
+        }
+        .call img{
+        	height: 25px;
+        	width: 25px;
+        	float: right;
+        }
+        .leftpanal{
+        	height: 800px;
+        	width: 200px;
+          	float: left;
+        	margin-left: 10px;
+        }
+        .pricemeter{
+        	width: 95%;
+        	height: 25px;
+        	margin-top: 5px;
+        	padding-top: 5px;
+        	float: left;
+        	padding-left: 5px;
+        	box-shadow: 1px 1px 1px 1px #A9A9A8;
+        }
+        .scale{
+        	width: 100px;
+        	background: black;
+        	float: right;
+        	margin-right: 20px;
+        	margin-top: -8px;
+        	height: 2px;
+        }
+        .drager{
+        	height: 10px;
+        	width: 10px;
+        	float: right;
+        	margin-top: -12px;
+        	margin-right: 50px;
+        	background: blue;
+        	border-radius: 20px;
+        }
+        .products{
+            width: 95%;
+            padding-left: 5px;
+            float: left;
+            margin-top: 8px;
+            box-shadow: 1px 1px 1px 1px #A9A9A8;
+            height: 260px;
+        }
+        .mainproduct{
+        	height: 20px;
+        	width: 100%;
+        	float: left;
+        }
+        .submainproduct{
+        	height: 15px;
+        	width: 80%;
+        	float: right;
+        }
+        .subproduct{
+        	width: 70%;
+        	float: right;
+        	height: 120px;
+        	color: #A9A9A8;
+        }
+        .rightpanal{
+        	height: 200px;
+        	width: 300px;
+        	box-shadow: 1px 1px 1px 1px #A9A9A8;
+        	float: right;
+        	margin-right: 5px;
+        	margin-top: 5px;
+        }
+        .top{
+        	width: 100%;
+        	height: 20px;
+        	margin-top: 5px;
+        	background: white;
+        }
+        .cart{
+        	height: 20px;
+        	width: 60px;
+        	margin-left: 10px;
+        	
+        	float: left;
+        }
+        .noofitem{
+        	height: 20px;
+        	width: 60px;
+        	margin-left: 5px;
+        	font-size: 18px;
+        	color: #51087E;
+        	float: left;
+        }
+        .top1{
+        	height: 20px;
+        	width: 100%;
+        	margin-top: 10px;
+        	background: white;
+        	
+        }
+        .name{
+        	height: 20px;
+        	width: 150px;
+        	
+        	float: left;
+        }
+        .rate{
+        	height: 20px;
+        	width: 40px;
+        	margin-left: 15px;
+        	float: left;
+        	
+        }
+        .quantity{
+        	height: 20px;
+        	width: 55px;
+        	float: left;
+        	margin-left: 15px;
+        	
+        }
+		.l3{
+			height: 22px;
+			width: 66px;
+			margin-right:15px;
+			margin-top: 20px;
+			border: 1px solid black;
+			float: right;
+		}
+		.l0{
+			height: 20px;
+			width: 20px;
+			
+			text-align: center;
+			border: 1px solid black;
+			float: left;
+		}
+		.l2,.l1{
+			height: 20px;
+			width: 20px;
+			
+			background: #2999E4;
+			color: white;
+			border: 1px solid black;
+			float: left;
+		}
+		.l1 h3{
+			font-size: 20px;
+			height: 20px;
+			text-align: center;
+			width: 20px;
+			margin-top: -2px;
+			
+		}
+		.l2 h3{
+			font-size: 20px;
+			height: 20px;
+			margin-top: -4px;
+			text-align: center;
+			width: 20px;
+		}
+		.bottom{
+			width: 100%;
+			height: 30px;
+			bottom: 0;
+			
+			margin-top: 110px;
+		}
+		.checkout{
+			width: 75px;
+			height: 20px;
+			padding-top: 5px;
+			color: white;
+			margin-left: 5px;
+			float: left;
+			background: #136DD8;
+		}
+		.total{
+			height: 20px;
+			margin-left: 10px;
+			padding-top: 5px;
+			float: left;
+		}
+
+		.recommendedhead{
+			height: 30px;
+			width: 810px;
+			padding-top: 5px;
+			margin-top: 10px;
+			margin-left: 8px;
+			
+			float: left;
+		}
+		.viewall{
+			height: 20px;
+			width: 60px;
+			float: right;
+			margin-top: 0px;
+			margin-right: 10px;
+			color: white;
+			background: blue;
+		}
+		.recommendeditem{
+			height: 60px;
+			width: 810px;
+			margin-top: 5px;
+			box-shadow: 1px 1px 1px 1px #A9A9A8;
+			float: left;
+			
+		}
+		.itemname{
+			height: 20px;
+			width: 200px;
+			float: left;
+			margin-top: 5px;
+			margin-left: 5px;
+			
+		}
+		.price1{
+			height: 20px;
+			width: 50px;
+			float: left;
+            margin-left: -200px;
+             margin-top: 30px;
+			
+		}
+		.quantity1{
+			height: 20px;
+			width: 70px;
+			margin-top: 20px;
+			margin-left: 100px;
+			float: left;
+			
+		}
+		.add{
+			height: 20px;
+			padding-top: 0px;
+			color: white;
+			margin-top: 20px;
+			margin-right: -380px;
+			padding-left: 5px;
+			width: 55px;
+			text-align: center;
+			float: right;
+			background: #A019F9;
+		}
+		.rate1{
+			height: 15px;
+			width: 35px;
+			float: left;
+			margin-top: 35px;
+			margin-left: -130px;
+			color: white;
+			font-size: 13px;
+			background: red;
+			border-radius: 20px;
+		}
+		.rate1 img{
+			float: left;
+			height: 13px;
+			margin-left: 2px;
+			width: 13px;
+
+		}
+		.count{
+			height: 22px;
+			width: 66px;
+			margin-right:325px;
+			margin-top: 17px;
+			border: 1px solid black;
+			float: right;
+		}
+		.count1{
+			height: 20px;
+			width: 20px;
+			
+			text-align: center;
+			border: 1px solid black;
+			float: left;
+		}
+		.minus,.plus{
+			height: 20px;
+			width: 20px;
+			
+			background: #2999E4;
+			color: white;
+			border: 1px solid black;
+			float: left;
+		}
+		.plus h3{
+			font-size: 20px;
+			height: 20px;
+			text-align: center;
+			width: 20px;
+			margin-top: -2px;
+			
+		}
+		.minus h3{
+			font-size: 20px;
+			height: 20px;
+			margin-top: -4px;
+			text-align: center;
+			width: 20px;
+		}
+		     .similarshops{
+		     	height: 30px;
+			width: 810px;
+			padding-top: 5px;
+			margin-top: 10px;
+			margin-left: 8px;
+			
+			float: left;
+			}
+			.similar_shop_panal{
+				height: 200px;
+				width: 810px;
+			    padding-top: 5px;
+			    margin-top: 10px;
+			    box-shadow: 1px 1px 1px 1px #A9A9A8;
+			    margin-left: 8px;
+			    float: left;
+			}
+			.similarshopdetail{
+				height: 180px;
+				box-shadow: 1px 1px 1px 1px #A9A9A8;
+				width: 150px;
+				float: left;
+                margin-top: 5px;
+                margin-left: 5px;
+
+
+			}
+			.similarshopdetail img{
+				height: 80px;
+				width: 120px;
+				float: left;
+				margin-left: 15px;
+				margin-top: 5px;
+			}
+			.shopname1{
+				height: 40px;
+				width: 120px;
+				margin-left: 15px;
+			}
+			.rate2{
+			height: 15px;
+			width: 35px;
+			float: left;
+			margin-top: 30px;
+			margin-left: 60px;
+			color: white;
+			font-size: 13px;
+			background: red;
+			border-radius: 20px;
+		}
+		.rate2 img{
+			float: left;
+			height: 13px;
+			margin-left: 2px;
+			margin-top: 0px;
+			width: 13px;
+
+		}
+		.explore{
+			color: white;
+			height: 20px;
+			width: 60px;
+			text-align: center;
+			background: #A019F9;
+			float: left;
+			margin-left:40px;
+			margin-top: 20px;
+		}
+		.writereview{
+			height: 100px;
+			width: 600px;
+			float: left;
+			margin-left: 217px;
+			margin-top: 5px;
+		}
+		.rating{
+			height: 60px;
+			margin-top: 20px;
+			margin-left: 5px;
+			width: 180px;
+			float: left;
+		}
+		.stars1{
+        	height: 20px;
+        	width: 130px;
+        	margin-left: 0px;
+        }
+        .stars1 img{
+               height: 20px;
+               width: 20px;     
+        }
+        .post{
+        	height: 20px;
+        	width: 40px;
+        	color: white;
+        	background: #2999E4;
+        	float: left;
+        	text-align: center;
+        	margin-top: 116px;
+        	margin-left: -790px;
+        }

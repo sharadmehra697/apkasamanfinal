@@ -1,0 +1,184 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+.mob_home_top{
+ width: 100%;
+ height:105px;
+ padding: 1% 0%;
+ background-color:#32C1C6;
+}
+.mob_home_top1{
+ width:100%;
+ height:65%;
+}
+
+.mob_home_top_opennav{
+  display: block;
+  float: left;
+  height: 100%;
+  width: 10%;
+}
+span #mob_nav_line1{
+  margin-top: 55%;
+}
+span .mob_nav_line{
+  display: block;
+     width: 75%;
+     height: 7%;
+     background: #151719;
+     margin-top: 8%;
+     margin-left: 20.5%;
+}
+.mob_home_top_logo{
+	float: left;
+  	height: 100%;
+  	width: 40%;
+}
+.mob_home_top_logo1{
+	width: 80%;
+	height:100%;
+	margin-left: 5%;
+	margin-top: 2.5%;
+}
+.mob_home_top_logo1 img{
+	width: 100%;
+	height: 100%;
+}
+
+.mob_home_top_data{
+	float: left;
+ 	height: 100%;
+  	width: 60%;
+}
+
+.mob_home_top_notify,.mob_home_top_user,.mob_home_top_cart{
+	width: 15%;
+	height:65%;
+	float: right;
+	margin-top: 4%;
+	margin-right: 8%;
+}
+.mob_home_top_notify img,.mob_home_top_user img,.mob_home_top_cart img{
+	width: 100%;
+	height: 100%;
+}
+.mob_home_top2{
+	width:100%;
+	height: 45%;
+}
+.mob_searchBar{
+	width:75%;
+	height: 70%;
+	float: left;
+	margin-top: 2%;
+	border-radius: 3px 0px 0px 3px;
+	padding-left: 4%;
+	margin-left: 4%; 
+	border: none;
+	background-color: white;
+}
+.mob_home_top2 input[type="submit"]{
+	width:13%;
+	height: 70%;
+	float: left;
+	margin-top: 2%;
+	background: url("/static/Icons/search.png") center center no-repeat;
+	border-radius: 0px 3px 3px 0px;
+	border: none;
+	background-color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0; 
+  position: fixed; 
+  z-index: 2;
+  background-color: whitesmoke; 
+  overflow-x: hidden;
+  padding-top: 60px; 
+  transition: 0.5s; 
+}
+
+.sidenav a {
+  padding: 2px 8px 4px 4px;
+  text-decoration: none;
+  font-size: 18px;
+  color: crimson;
+  display: block;
+  transition: 0.3s;
+  float: left;
+}
+.sidenav img{
+float: left;
+width: 25px;
+height: 25px;
+}
+.apka_bar_sidenav_detail{
+	width:260px;
+	height:20px;
+	margin-left: 15px;
+}
+
+.sidenav a:hover {
+  color: red;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  margin-top: -10px;
+  color: red;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 60px;
+}
+.apka_bar_up{
+	position: absolute;
+	width:260px;
+	height: 150px;
+	margin-top: -60px;
+	background-color: dodgerblue;
+
+}
+.apka_bar_detail{
+	width:170px;
+	height: 110px;
+	margin-top: 30px;
+	margin-left: 40px;
+}
+.apka_bar_detail img{
+	margin-left: 60px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.apka_bar_text{
+	font-size: 18px;
+	text-align: center;
+	color: white;
+}
+.apka_mob_down_bar{
+	width: 100%;
+	height: 165px;
+	display: none;
+	background-color: gray;
+}
+.apka_mob_down_data{
+	padding: 1.5% 0%;
+	text-align: center;
+	font-size: 22px;
+	color: white;
+}
+.apka_mob_down_data_line{
+	background-color: white;
+	padding: 1px;
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 1%;
+}
+.apka_mob_down_data:hover{
+	background-color: lightgray;
+	color: red;
+}
+
+
