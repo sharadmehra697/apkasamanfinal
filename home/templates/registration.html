@@ -1,0 +1,231 @@
+{%extends 'regisbasic.html'%}
+{%load static %}
+{%block title%}Registration{%endblock%}
+{%block link%} <link rel="stylesheet" type="text/css" href="{%static 'css/registration.css'%}">
+<script src="{%static 'js/jquery.min.js'%}"></script>{%endblock%}
+{%block heading%}APKASAMAN REGISTTRATION{%endblock%}
+{%block body%}
+
+
+
+
+    <div id="regis_body">
+      <div class="regis_number_box">
+      <div class="regis_head">Register</div>
+      {{userNumber}}
+      <!--for get Number -->
+      <div class="regis_number">
+        <div class="regis_number_code"><b>+91</b></div>
+        <div class="regis_number_mobile">
+          <input type="number" placeholder="Enter Phone Number" id="data_number">
+        </div>
+      </div> <div class="regis_number_err"></div>
+      <div class="regis_join">Joins Us</div>
+      <div class="regis_options">
+        <div class="regis_options_line"></div>
+        <div class="or">or just continue with</div>
+        <div class="regis_options_line"></div>
+      </div>
+      <div class="regis_social">
+        <div class="regis_social_link"><img src="{%static 'Icons/google.png'%}"></div>
+        <div class="regis_social_link"><img src="{%static 'Icons/fb.png'%}"></div>
+        <div class="regis_social_link"><img src="{%static 'Icons/truecaller.png'%}"></div>
+      </div>
+      <div class="regis_login_link">
+        Already have apkasaman seller account?<a href="Login"><u>Sign up</u></a>
+      </div>
+    </div>
+    <!--for get Number otp -->
+    <div class="regis_otp_box" style="display: none;">
+      <div class="regis_head">Enter Otp</div>
+       
+      <div class="regis_otp">
+        <div class="regis_number_mobile_otp">
+          <input type="text" placeholder="Enter Otp" id="regis_otp">
+        </div><div class="regis_otp_err"></div>
+      </div>
+      <div class="regis_checkotp">Confirm Otp</div>
+      <span class="regis_re-enter"> Re-Enter Number</span> <span style="float: right;"> Resend otp</span>
+    </div>
+    <!--for get password-->
+    <div class="regis_pass_box" style="display: none;">
+      <form>
+      <div class="regis_head">Enter PassWord</div>
+      <div class="regis_password">
+        <input type="text" class="regis_password_body" placeholder="Enter Full Name" id="regis_name" autocomplete="off" required>
+      </div>
+      <div class="regis_password">
+        <div class="regis_date_birth">Date Of Birth</div>
+        <div class="regis_date_birth_entry">
+          <input type="date" id="regis_dob" required>
+        </div>
+      </div>
+      <div class="regis_password">
+        <input type="password" class="regis_password_body" placeholder="Enter Password" id="regis_pass" autocomplete="off" required>
+        <div class="regis_pass_err"></div>
+      </div>
+      <div class="regis_password">
+        <input type="password" placeholder="Confirm Password" class="regis_password_body" id="regis_cpass" autocomplete="off" required>
+        <div class="regis_cpass_err"></div>
+      </div>
+    </form>
+      <div class="regis_set_password">Set Password</div>
+    </div>
+    </div>
+<div class="benefits">Benefits</div>
+<div class="allinone"><b>ALL IN ONE</b></div>
+<div class="delivery">Delivery Service</div>
+<div class="plus"><img src="{%static 'Icons/plus_gray.png' %}"></div>
+<div class="Selling">Selling Platform</div>
+<div class="web_link">(www.apkasaman.com)</div>
+<div class="plus"><img src="{%static 'Icons/plus_gray.png' %}"></div>
+<div class="advertisement">Advertisement</div>
+<div class="line1"></div>
+<div class="allinone"><b>FREE</b></div>
+<div class="pera">We are providing <b>6 months</b> free service to our costomer</div>
+<div class="line1"></div>
+<div class="allinone"><b>FAIR MARKET PLACE</b></div>
+<div class="pera">We are providing a platform which is purely based on<b>Rating System</b></div>
+<div class="line1"></div>
+<div class="allinone"><b>SIMPLE & EASY INVENTORY MANAGEMENT</b></div>
+<div class="pera">You can manage your shop inventory with our ,very simple and<b>easy web application</b></div>
+<a href='Registration' style="text-decoration:none; color: white;"><div class="register_now">Register Now</div></a>
+<div class="line1"></div>
+<div class="shops_registered"><b><u>Shops Registered</u></b></div>
+<div class="count"><b>100</b></div>
+<div class="line1"></div>
+<div class="stories"><b><u>Stories</u></b></div>
+{%endblock%}
+{%block js%}
+<script type="text/javascript">
+let csrfcookie = function() {
+            let cookieValue = null,
+                name = "csrftoken";
+            if (document.cookie && document.cookie !== "") {
+                let cookies = document.cookie.split(";");
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) == (name + "=")) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        };
+var cust_num;
+var regis_rand_otp;
+  $('.regis_join').click(function() {
+    cust_num=document.getElementById('data_number').value;
+    if(cust_num.length!=10){
+      $('.regis_number').css('background-color','red');
+      $('.regis_number_err').html('*Enter Correct Number');
+      return false;
+    }
+    $.ajax({
+      beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+      data:{
+        'cust_num':cust_num,
+      },
+      type: 'POST',
+      url: 'checkotp',
+      success: correctNum
+    });
+
+    function correctNum(data){
+    if(data=='numExist'){
+    $('.regis_number_box').css('display','block');
+    $('.regis_otp_box').css('display','none');
+    $('.regis_join').css('display','block');
+    $('.regis_number').css('background-color','red');
+     $('.regis_number_err').html('**Number Already Exists!');
+      return false;
+    }
+    console.log(data)
+    regis_rand_otp=data
+    $('.regis_number').css('background-color','gray');
+    $('.regis_number_err').html('');
+    $('.regis_number_box').css('display','none');
+    $('.regis_otp_box').css('display','block');
+    $('.regis_join').css('display','none');
+      }
+
+  });
+
+  $('.regis_re-enter').click(function(){
+    $('.regis_number_box').css('display','block');
+    $('.regis_otp_box').css('display','none');
+    $('.regis_join').css('display','block');
+  });
+
+  $('.regis_checkotp').click(function(){
+    var x=document.getElementById('regis_otp').value;
+    if(x==regis_rand_otp){
+      $('.regis_otp_err').html('')
+      $('.regis_otp_box').css('display','none')
+      $('.regis_pass_box').css('display','block')
+    }else{
+      $('.regis_otp_err').html('**Wrong Otp')
+    }
+  });
+  // for checking password
+  $('#regis_pass').keyup( function(){
+    var pass=document.getElementById('regis_pass').value
+    if(pass.length<6){
+      $('.regis_pass_err').html('**Password Must be Greater then 6 digit')
+    }else{
+      $('.regis_pass_err').html('')
+    }
+  });
+  //for checking confirm password
+  $('#regis_cpass').keyup( function(){
+    var pass=document.getElementById('regis_pass').value
+    var cpass=document.getElementById('regis_cpass').value
+    if(pass !=cpass){
+      $('.regis_cpass_err').html('**Confirm Password must be same')
+    }else{
+      $('.regis_cpass_err').html('')
+    }
+  });
+  //for store the password in database
+  $('.regis_set_password').click(function(){
+    var pass=document.getElementById('regis_pass').value;
+    var cpass=document.getElementById('regis_cpass').value;
+    if(pass!=cpass){
+      return false;
+    }
+    $.ajax({
+      beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+      data:{
+        'user_mobile':$('#data_number').val(),
+        'user_pass':$('#regis_pass').val(),
+        'user_dob':$('#regis_dob').val(),
+        'user_name':$('#regis_name').val()
+      },
+      type: 'POST',
+      url: 'Registration',
+      success: function(data){
+        if(data=='NumExist'){
+          $('.regis_number_box').css('display','block');
+          $('.regis_otp_box').css('display','none');
+          $('.regis_pass_box').css('display','none');
+          $('.regis_join').css('display','block');
+          $('.regis_number').css('background-color','red');
+          $('.regis_number_err').html('**Number Already Exists!');
+          return false;
+        }
+        window.location='Login';
+      }
+    });
+
+  });
+</script>
+{%endblock%}

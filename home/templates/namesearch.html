@@ -1,0 +1,5 @@
+{%if status%}
+{%for i in status%}
+<div class='apka_shop_item_values' id="{{i.perprod_id}}" onclick="getsearchItem(this,'{{i.product_category}}','{{i.product_subcategory}}','{{i.product_name}}')">{{i.product_name}}</div>
+{%endfor%}
+{%endif%}

@@ -1,0 +1,389 @@
+{%extends 'regisbasic.html'%}
+{%block title%}{{request.session.additem_ids}}{%endblock%}
+
+{%load static%}
+{%block link%}
+<link rel="stylesheet" href="{%static 'css/shopkprhome.css'%}">
+<script src="{%static 'js/jquery.min.js'%}"></script>
+ <link rel="stylesheet" type="text/css" href="{%static 'css/shopa_inventry.css'%}">
+<link rel="stylesheet" href="{%static 'css/swiper.min.css'%}">
+
+{%endblock%}
+{%block style%}
+{%endblock%}
+{%block heading%}
+APKASAMAN SELLER
+{%endblock%}
+
+{%block body%}
+
+ <script type="text/javascript">
+   var itemData=new Array();
+  function toggleItem(){
+  $('#getnew').html('');
+  for(i=0;i<itemData.length;i++){
+        var v='<div class="item_in_toggle"><div class="item_toggle_name" id="{{name}}">'+itemData[i].pdname+'</div><div class="item_toggle_quan"><input type="number" value="'+itemData[i].pdprice+'" onchange="changePrice('+i+')" id="'+itemData[i].uid+'p"></div><div class="item_toggle_price" id="{{name}}p">&#8377; <input type="number" value="'+itemData[i].pdquan+'" onchange="changeQuan('+i+')" id="'+itemData[i].uid+'q"></div><div class="item_toggle_image">I</div><div class="item_toggle_cut" onclick=deleteAdditem(this) id="'+itemData[i].uid+'">X</div></div>';
+
+  $('#getnew').append(v);
+}
+
+}
+ </script>
+
+    <!--for additem -->
+<div id="apka_shop_additem_body" class="apka_shop_bottom_content">
+  <div class="apka_shop_input_selected_cats">
+    <div class="apka_shop_cats_first" onclick="cats_first(1)"></div>
+    <div class="apka_shop_cats_second" onclick="cats_first(2)"></div>
+    <div class="apka_shop_cats_third" onclick="cats_first(3)"></div>
+    <div class="apka_shop_cats_fourth" onclick="cats_first(4)"></div>
+  </div>
+  <div id="apka_shop_id_category">
+    <select name="sCategory" id="apka_shop_data_category" class="apka_shop_input_category">
+      <option value=""><h3>Select Category</h3></option>
+      {%for i in category%}
+      <option value="{{i.category_key}}">{{i.category_name}}</option>
+      {%endfor%}
+    </select>
+  </div>
+  <div id="apka_shop_id_subcategory"></div>
+  <div id="apka_shop_id_subchild"></div>
+  <div id="apka_shop_id_subdaughter"></div>
+  <input type="text" name="" style='display: none;'class="apka_shop_input_name" id="asa00" placeholder="Enter Product Name" autocomplete="off"><br>
+  <div class="apka_shop_item_search">
+  </div>
+  <div class="apka_shop_input_otherfield">
+  </div>
+
+  <div class="apka_shop_category_input">
+    
+  </div>
+  <div class="apka_shop_added-list">
+    <div class="apka_shop_added_items" id="apka_shop_added_items">
+        <!-- ADD item to body-->
+      <div id="getnew"> 
+        {%if ash%}
+              
+              <script type="text/javascript">
+                {%for i,j,k,l in ash%}
+                 itemData.push({pdname:'{{j}}',pdprice:'{{k}}',pdquan:'{{l}}',uid:'{{i}}' });
+                {%endfor%}
+               toggleItem();
+              </script>
+
+              {%endif%}
+      </div>
+
+      <button onclick="finaluploadItems()">ADD TO INVENTORY</button>
+    </div>
+    <div class="apka_shop_show_added" id="flip">SELECTED ITEMS<span>&#9650;</span></div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function() {
+
+    $('.apka_shop_input_name').keyup(function() {
+
+        $.ajax({
+            type: "GET",
+            url: "nameSearch",
+            data: {
+                'search_text' : $('.apka_shop_input_name').val(),
+                'cat':$('#apka_shop_data_category').val(),
+                'csrfmiddlewaretoken' : $("input[name=csrfmiddlewaretoken]").val()
+            },
+            success: searchSuccess,
+            dataType: 'html'
+        });
+    });
+});
+  function searchSuccess(data){
+    $('.apka_shop_item_search').css('display','block')
+    $('.apka_shop_item_search').html(data)
+
+  }
+function getsearchItem(i,cat,subcat,name){
+  $('.apka_shop_item_search').html('');
+
+  $.ajax({
+    type: "GET",
+    url: "getField",
+    data:{
+      'pid':i.id,
+      'cat_val':subcat,
+      'catkey':cat,
+      'csrfmiddlewaretoken' : $("input[name=csrfmiddlewaretoken]").val(),
+    },
+    success: function(data){
+       $('.apka_shop_category_input').html(data);
+    },
+    dataType: 'html'
+  });
+}
+  //for doing the updatino in categories
+  function cats_first(i){
+    if(i==1){
+      $('#apka_shop_id_subcategory').html('');
+      $('#apka_shop_id_subchild').html('');
+      $('#apka_shop_id_subdaughter').html('');
+      $('.apka_shop_cats_second').html('')
+      $('.apka_shop_cats_first').html('')
+      $('.apka_shop_cats_third').html('')
+      $('.apka_shop_cats_fourth').html('')
+      $('#apka_shop_id_category').css('display','block');
+      $('.apka_shop_item_search').css('display','none');
+      document.getElementById('apka_shop_data_category').value=''
+      $('.apka_shop_category_input').html('')
+      $('.apka_shop_input_name').css('display','none')
+    }
+    if(i==2){
+      $('#apka_shop_id_subchild').html('');
+      $('#apka_shop_id_subdaughter').html('');
+      $('.apka_shop_cats_second').html('')
+      $('.apka_shop_cats_third').html('')
+      $('.apka_shop_cats_fourth').html('')
+      $('#apka_shop_id_subcategory').css('display','block');
+      document.getElementById('apka_shop_data_subcategory').value=''
+    }
+    if(i==3){
+      $('#apka_shop_id_subdaughter').html('');
+      $('.apka_shop_cats_third').html('')
+      $('.apka_shop_cats_fourth').html('')
+      $('#apka_shop_id_subchild').css('display','block');
+      document.getElementById('apka_shop_data_subchild').value=''
+    }
+    if(i==4){
+      $('.apka_shop_cats_fourth').html('')
+      $('#apka_shop_id_subdaughter').css('display','block');
+      document.getElementById('apka_shop_data_subdaughter').value=''
+    }
+  }
+  function deleteAdditem(i){
+  $('#'+i.id).parent().remove()
+  $.ajax({
+      data:{
+        'pkey':i.id
+      },
+      url:'delProduct',
+      type:'GET',
+      success:function(data){
+        console.log(data);
+      }
+
+    });
+  }
+  //for category data
+$(function() {
+    $('#apka_shop_data_category').change(function() {
+        $.ajax({
+            type: "GET",
+            url: "getSubchild",
+            data: {
+                'select_subcategory' : $('#apka_shop_data_category').val(),
+                'intype' : "category",
+                'csrfmiddlewaretoken' : $("input[name=csrfmiddlewaretoken]").val()
+            },
+            success: searchSubcategory,
+            dataType: 'html'
+        });
+    });
+});
+
+function  searchSubcategory(data, textStatus, jqXHR)
+{  
+    if(data.length<1){
+      $('.apka_shop_cats_first').html($('#apka_shop_data_category').val());
+    }else{
+      $('.apka_shop_cats_first').html($('#apka_shop_data_category').val()+" >> ");
+      $('#apka_shop_id_subcategory').html(data);
+      $('#apka_shop_id_category').css('display','none');
+      $('#apka_shop_id_subcategory').css('display','block');
+    }
+}
+ // for get the toggle working
+$(document).ready(function(){
+  $("#flip").click(function(){
+  $("#apka_shop_added_items").slideToggle("slow");
+  });
+});
+//toggle price quantity change
+function changePrice(val){
+   itemData[val].pdprice=parseInt(document.getElementById(itemData[val].uid+'p').value);
+   console.log(itemData);
+}
+function changeQuan(val){
+   itemData[val].pdquan=parseInt(document.getElementById(itemData[val].uid+'q').value);
+   console.log(itemData);
+}
+// fro uploading data
+   function finaluploadItems(){
+    let csrfcookie = function() {
+            let cookieValue = null,
+                name = "csrftoken";
+            if (document.cookie && document.cookie !== "") {
+                let cookies = document.cookie.split(";");
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) == (name + "=")) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        };
+        console.log(itemData);
+    $.ajax({
+            type: "POST",
+            url: "setItemSession",
+            beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+            data: {
+                'allSet':JSON.stringify(itemData),
+                'csrfmiddlewaretoken' :'{{csrf_token}}'
+            },
+            success: upSuccess,
+            dataType: 'html',
+            cache: false
+
+        });
+
+   } 
+  function  upSuccess(data, textStatus, jqXHR){
+    console.log(data);
+    $('#getnew').html('');
+  }
+
+//for inventry List data
+      $(function() {
+
+    $('#shopInventry').click(function() {
+        $.ajax({
+            type: "GET",
+            url: "getShopinventry",
+            data: {
+                'csrfmiddlewaretoken' : $("input[name=csrfmiddlewaretoken]").val()
+            },
+            success: successshopInventry,
+            dataType: 'html'
+        });
+    });
+});
+
+function  successshopInventry(data, textStatus, jqXHR)
+{ 
+    $('#apka_shop_inventry_body').html(data)
+}
+//for order List data
+      $(function() {
+
+    $('#shopOrder').click(function() {
+        $.ajax({
+            type: "GET",
+            url: "getOrdersItems",
+            data: {
+                'csrfmiddlewaretoken' : $("input[name=csrfmiddlewaretoken]").val()
+            },
+            success: orderItemsdata,
+            dataType: 'html'
+        });
+    });
+});
+
+function  orderItemsdata(data, textStatus, jqXHR)
+{  
+    $('#apka_shop_orders_body').html(data)
+}
+
+</script>
+ <!--for inventry -->
+<div id="apka_shop_inventry_body" class="apka_shop_bottom_content">
+
+</div>
+ <!--for orders -->
+<div id="apka_shop_orders_body" class="apka_shop_bottom_content">
+</div>
+
+ <!--for account -->
+<div id="apka_shop_account_body" class="apka_shop_bottom_content">
+  <div class="apka_shop_account_00">
+    {%if simg%}<img src="media/{{simg.shpimg_name}}">
+    {%else%}<img src="{%static 'Icons/accountshop.jpg'%}">{%endif%}
+  </div>
+  <div class="apka_shop_account_10">
+    <div class="apka_shop_account_11"><img src="{%static 'Icons/NoImageAvailable.jpg'%}"></div>
+    <div class="apka_shop_account_12">
+      <div class="apka_shop_account_121 name">{{sS.shopkpr_id.shopkpr_name}}</div>
+      <div class="apka_shop_account_121">{{sS.shopkpr_id.regis_id.regis_mobile}}</div>
+      <div class="apka_shop_account_121">*4.3</div>
+    </div>
+    <div class="apka_shop_account_13">
+      <div class="apka_shop_account_121 edit">EDIT</div>
+    </div>
+  </div>
+  <div class="apka_shop_account_20">
+    <div class="apka_shop_account_21">
+      <div class="apka_shop_account_211">ADD BANK ACCOUNT</div>
+      <div class="apka_shop_account_212"><img src="{%static 'Icons/rightarrow.png'%}"></div>
+    </div>
+    <div class="apka_shop_account_21">
+      <div class="apka_shop_account_211">SETTING</div>
+      <div class="apka_shop_account_212"><img src="{%static 'Icons/settings.png'%}"></div>
+    </div>
+    <div class="apka_shop_account_21">
+      <div class="apka_shop_account_211">CONTACT US</div>
+      <div class="apka_shop_account_212"><img src="{%static 'Icons/phone.png'%}"></div>
+    </div>
+    <div class="apka_shop_account_21">
+      <div class="apka_shop_account_211">TERMS & CONDITIONS</div>
+      <div class="apka_shop_account_212"><img src="{%static 'Icons/circle.png'%}"></div>
+    </div>
+    <div class="apka_shop_account_21">
+      <a href="changePass" style="text-decoration: none;color: black;"><div class="apka_shop_account_211">CHANGE PASSWORD</div>
+      <div class="apka_shop_account_212"><img src="{%static 'Icons/penedit.png'%}"></div>
+    </div>
+    <div class="apka_shop_account_21">
+      <a href="getOut" style="text-decoration: none; color: black;"><div class="apka_shop_account_211">LOGOUT</div></a>
+      <div class="apka_shop_account_212"><img src="{%static 'Icons/power-off.png'%}"></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="apka_shop_bottom" id="apka_bottom_id">
+  <div class="apka_shop_bottom_nav_data" onclick="shopBottomnav('apka_shop_additem_body', this, '#28B8EE')" id="defaultOpen">
+    <div class="apka_shop_bottom_image">
+      <img src="{%static 'Icons/plus_gray.png'%}"height="30" width="30">
+    </div>
+    <div class="apka_shop_bottom_text">ADD ITEM</div>
+  </div>
+
+  <div class="apka_shop_bottom_nav_data" onclick="shopBottomnav('apka_shop_inventry_body', this, '#28B8EE')" id="shopInventry">
+    <div class="apka_shop_bottom_image">
+      <img src="{%static 'Icons/inventrysmall.png'%}" height="30" width="30">
+    </div>
+    <div class="apka_shop_bottom_text">INVENTRY</div>
+  </div>
+
+  <div class="apka_shop_bottom_nav_data" onclick="shopBottomnav('apka_shop_orders_body', this, '#28B8EE')" id="shopOrder">
+    <div class="apka_shop_bottom_image">
+      <img src="{%static 'Icons/tasks.png' %}" height="30" width="30">
+    </div>
+    <div class="apka_shop_bottom_text">ORDERS</div>
+  </div>
+
+  <div class="apka_shop_bottom_nav_data" onclick="shopBottomnav('apka_shop_account_body', this, '#28B8EE')">
+    <div class="apka_shop_bottom_image">
+      <img src="{%static 'Icons/Profile.png'%}" height="30" width="30">
+    </div>
+    <div class="apka_shop_bottom_text">ACCOUNT</div>
+  </div>
+</div>
+    {%endblock%}
+    <!-- end of fixed tab bars -->
+  {%block js%}
+  <script type="text/javascript" src="{%static 'js/bottomnav.js'%}"></script>
+{%endblock%}

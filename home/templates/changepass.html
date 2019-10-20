@@ -1,0 +1,151 @@
+{%extends 'regisbasic.html'%}
+{%load static %}
+{%block title%}Data Entry Page{%endblock%}
+{%block link%}
+<link rel="stylesheet" type="text/css" href="{%static 'css/registration.css'%}">
+<script src="{%static 'js/jquery.min.js'%}"></script>{%endblock%}
+{%block heading%}Forgotten Password?{%endblock%}
+{%block body%}
+<div id="regis_body">
+	<div class="regis_head">Change Password</div><br>
+	<div class="regis_forgotten_number_body">
+		<label><b>Enter Registered Phone Number</b></label><br>
+		<input type="number" placeholder="Enter Phone Number" id="data_number" class="regis_forgotten">
+		<div class="regis_number_err"></div>
+		<div class="regis_forgotten_enter" id="regis_join"> Continue</div>
+	</div>
+	<div class="regis_forgotten_otp_body" style="display: none;">
+		<label><b>Enter OTP Sent to Number.</b></label><br>
+		<input type="number" placeholder="Enter OTP" id="regis_otp" class="regis_forgotten">
+		<div class="regis_otp_err"></div>
+		<div class="regis_forgotten_enter" id="regis_checkotp"> Verify</div>
+	</div>
+	<div class="regis_forgotten_newpass" style="display: none;">
+		<label><b>Enter New Password</b></label>
+		<div class="regis_password">
+			<input type="password" class="regis_password_body" placeholder="Enter New Password" id="regis_pass" autocomplete="off" required>
+			<div class="regis_pass_err"></div>
+		</div>
+		<div class="regis_password">
+			<input type="password" placeholder="Confirm Password" class="regis_password_body" id="regis_cpass" autocomplete="off" required>
+			<div class="regis_cpass_err"></div>
+		</div>
+		<div class="regis_set_password">Set Password</div>
+	</div>
+</div>
+
+
+{%endblock%}
+{%block js%}
+<script type="text/javascript">
+	let csrfcookie = function() {
+            let cookieValue = null,
+                name = "csrftoken";
+            if (document.cookie && document.cookie !== "") {
+                let cookies = document.cookie.split(";");
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) == (name + "=")) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        };
+	var forgotten_otp;
+	$('#regis_join').click(function() {
+    cust_num=document.getElementById('data_number').value;
+    if(cust_num.length!=10){
+      $('.regis_forgotten').css('border-color','red');
+      $('.regis_number_err').html('*Enter Correct Number');
+      return false;
+    }else{
+    	$('.regis_forgotten').css('border-color','gray');
+    }
+    $.ajax({
+      beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+      data:{
+        'cust_num':cust_num,
+      },
+      type: 'POST',
+      url: 'forgetsendOtp',
+      success: correctNum
+    });
+
+    function correctNum(data){
+    if(data=='numNotExist'){
+     $('.regis_number_err').html('**Number Not registered!');
+     document.getElementById('data_number').value='';
+      return false;
+    }
+    console.log(data)
+    forgotten_otp=data
+    $('.regis_number').css('background-color','gray');
+    $('.regis_number_err').html('');
+    $('.regis_forgotten_number_body').css('display','none');
+    $('.regis_forgotten_otp_body').css('display','block');
+    $('#regis_join').css('display','none');
+      }
+
+  });
+	$('#regis_checkotp').click(function(){
+    var x=document.getElementById('regis_otp').value;
+    if(x==forgotten_otp){
+      $('.regis_otp_err').html('')
+      $('.regis_forgotten_otp_body').css('display','none')
+      $('.regis_forgotten_newpass').css('display','block')
+    }else{
+      $('.regis_otp_err').html('**Wrong Otp')
+    }
+  });
+	 // for checking password
+  $('#regis_pass').keyup( function(){
+    var pass=document.getElementById('regis_pass').value
+    if(pass.length<6){
+      $('.regis_pass_err').html('**Password Must be Greater then 6 digit')
+    }else{
+      $('.regis_pass_err').html('')
+    }
+  });
+  //for checking confirm password
+  $('#regis_cpass').keyup( function(){
+    var pass=document.getElementById('regis_pass').value
+    var cpass=document.getElementById('regis_cpass').value
+    if(pass !=cpass){
+      $('.regis_cpass_err').html('**Confirm Password must be same')
+    }else{
+      $('.regis_cpass_err').html('')
+    }
+  });
+   //for store the password in database
+  $('.regis_set_password').click(function(){
+    var pass=document.getElementById('regis_pass').value;
+    var cpass=document.getElementById('regis_cpass').value;
+    if(pass!=cpass){
+      return false;
+    }
+    $.ajax({
+      beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+      data:{
+        'user_mobile':$('#data_number').val(),
+        'user_pass':$('#regis_pass').val()
+      },
+      type: 'POST',
+      url: 'forgottenPass',
+      success: function(data){
+        window.location='Shopmain';
+      }
+    });
+
+  });
+</script>
+{%endblock%}

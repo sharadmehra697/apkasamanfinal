@@ -1,0 +1,178 @@
+{%extends 'regisbasic.html'%}
+{%load static %}
+{%block title%}Document Verification{%endblock%}
+{%block link%} <link rel="stylesheet" type="text/css" href="{%static 'css/shopregistration.css'%}">
+<script type="text/javascript" src="{%static 'js/jquery.min.js'%}"></script>{%endblock%}
+{%block heading%}APKASAMAN SELLER
+{%endblock%}
+{%block body%}
+<div class="apka_shop_regis_top">
+  <div class="apka_shop_regis_1"> Step 3</div>
+  <div class="apka_shop_regis_21"></div>
+  <div class="apka_shop_regis_23">Shop Verification</div>
+  <div class="apka_shop_regis_22"></div>
+  <div class="apka_shop_regis_3"> Finish</div>
+</div>
+<div id="regis_body">
+  <div class="apka_shop_image">
+    <div class="apka_shop_verify_head">Shop Image</div>
+    <div class="apka_shop_image_container">
+      {%for i in sImgs%}
+      <div class="apka_shop_image_uploaded_data" id="{{i.shpimg_key}}" style="background:url('/media/{{i.shpimg_name}}');background-repeat: no-repeat;background-size: 100% 100%;"><div class="apka_shop_verify_uploaded_close" id="{{i.shpimg_key}}" onclick="deleteUpload(this,1)">X</div></div>
+      {%endfor%}
+    </div>
+    <div class="apka_shop_image_uploaded">
+      <input type="file" name="img" id="hiddenImage" style="display:none" required>
+      <input type=button id="apka_upload_Image"  class="apka_shop_verify_images_input">
+    </div>
+      <div class="apka_shop_verify_images_type">(.jpg,.jpeg,.png)</div>
+  </div>
+
+  <div class="apka_shop_verify_body">
+    <div class="apka_shop_verify_head">Document For Verification</div>
+    <select class="apka_shop_verify_select">
+      <option>Select Verification Document</option>
+      <option value="addhar_card">Addhar Card</option>
+      <option value="pen_card">Pen Card</option>
+    </select>
+    <input type="text" name="" class="apka_shop_verify_number" placeholder="Enter Document Number">
+    <div class="apka_shop_verify_uploaded">
+      {%for i in sDocs%}
+      <div class="apka_shop_verify_uploaded_images" id="{{i.shpdocument_key}}" style="background:url('/media/{{i.shpdocument_name}}');background-repeat: no-repeat;background-size: 100% 100%;"><div class="apka_shop_verify_uploaded_close" id="{{i.shpdocument_key}}" onclick="deleteUpload(this,0)">X</div></div>
+      {%endfor%}
+    </div>
+    <div class="apka_shop_verify_images">
+      <div class="apka_shop_verify_images_body">
+        <input type="file" name="img" id="hiddenDocument" style="display:none" required>
+        <input type=button id="apka_upload_document"  class="apka_shop_verify_images_input">
+      </div>
+      <div class="apka_shop_verify_images_type">(.jpg,.jpeg,.png)</div>
+    </div>
+  </div>
+  <button class="apka_shop_regis_getregis">Continue</button>
+
+</div>
+{%endblock%}
+{%block js%}
+<script type="text/javascript">
+
+  let csrfcookie = function() {
+            let cookieValue = null,
+                name = "csrftoken";
+            if (document.cookie && document.cookie !== "") {
+                let cookies = document.cookie.split(";");
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) == (name + "=")) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        };
+//for going to home page
+$('.apka_shop_regis_getregis').click(function() {
+        window.location='Shopmain';
+});
+  //for get the file upload
+  $('#apka_upload_document').click(function(){ 
+    $('#hiddenDocument').trigger('click');
+});
+var k;
+  //for image upload to database
+  jQuery("#hiddenDocument").on("change", function() {
+     k=URL.createObjectURL(event.target.files[0]);
+        formdata = new FormData();
+    var file = this.files[0];
+    if (formdata) {
+      formdata.append("image", file);
+      jQuery.ajax({
+         beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+        url: "insertDocument",
+        type: "POST",
+        data: formdata,
+        processData: false,
+        contentType: false,
+        success:searchImages
+      });
+    }           
+  }); 
+  function searchImages(data, textStatus, jqXHR){
+     $('.apka_shop_verify_uploaded').append('<div class="apka_shop_verify_uploaded_images" id="'+data+'"><div class="apka_shop_verify_uploaded_close" id="'+data+'" onclick="deleteUpload(this,0)">X</div></div>');
+    console.log(data);
+    var z=document.getElementById(data);
+    z.style.backgroundImage = "url('"+k+"')";
+    var b=$('.apka_shop_verify_uploaded').children().length;
+    if(b>4){
+     $('.apka_shop_verify_uploaded').css('height','50%');
+     $('.apka_shop_verify_uploaded_images').css('height','50%');
+     $('.apka_shop_verify_body').css('height','480px');
+    }
+    }
+
+    function deleteUpload(v,tp){
+      var delVal=v.id;
+      $(v).parent().remove();
+      jQuery.ajax({
+         beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+        url: "delImage",
+        type: "post",
+        data: {
+          'delVal':delVal,
+          'dbName':tp,
+        },
+        success:function(data){
+          if(data=='done'){
+
+          }
+          console.log(data)
+        }
+      });
+
+    }
+
+     //for get the image Upload
+  $('#apka_upload_Image').click(function(){ 
+    $('#hiddenImage').trigger('click');
+});
+var ik;
+  //for image upload to database
+  jQuery("#hiddenImage").on("change", function() {
+     ik=URL.createObjectURL(event.target.files[0]);
+        formdata = new FormData();
+    var file = this.files[0];
+    if (formdata) {
+      formdata.append("image", file);
+      jQuery.ajax({
+         beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+        url: "insertImage",
+        type: "POST",
+        data: formdata,
+        processData: false,
+        contentType: false,
+        success:successShop
+      });
+    }           
+  }); 
+  function successShop(data, textStatus, jqXHR){
+     $('.apka_shop_image_container').append('<div class="apka_shop_image_uploaded_data" id="'+data+'"><div class="apka_shop_verify_uploaded_close" id="'+data+'" onclick="deleteUpload(this,1)">X</div></div>');
+    console.log(data);
+    var z=document.getElementById(data);
+    z.style.backgroundImage = "url('"+ik+"')";
+    var b=$('.apka_shop_image_container').children().length;
+    }
+</script>
+{%endblock%}

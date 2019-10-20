@@ -1,0 +1,26 @@
+{%extends 'regisbasic.html'%}
+{%load static %}
+{%block title%}Data Entry Page{%endblock%}
+{%block link%}
+{%endblock%}
+{%block heading%}APKASAMAN DATABASE{%endblock%}
+{%block body%}
+<form action="getupexcel" method="POST" enctype="multipart/form-data" class=""> 
+{% csrf_token %}
+<center>
+	<h3>{{quote}}</h3>
+	<label for="name" class="">Upload File: </label><br>
+	<input type="file" name="csv_file" id="csv_file" required="True" class=""><br><br>
+	<select name="db_name" required="True">
+		<option value="">Select Table</option>
+		<option value="home_category">home_category</option>
+		<option value="home_sub_category">home_sub_category</option>
+		<option value="home_subfields">home_subfields</option>
+		<option value="home_sub_child">home_sub_child</option>
+		<option value="home_typetable">home_typetable</option>
+	</select><br><br>
+	<input type="password" name="db_pass" placeholder="Enter Passcode:" required="True"><br><br>
+	 <button class=""> <span class="" style="margin-right:5px;"></span>Upload </button>
+</center>
+</form>
+{%endblock%}

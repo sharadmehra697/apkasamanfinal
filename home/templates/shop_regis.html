@@ -1,0 +1,130 @@
+{%extends 'regisbasic.html'%}
+{%load static %}
+{%block title%}Registration{%endblock%}
+{%block link%} <link rel="stylesheet" type="text/css" href="{%static 'css/shopregistration.css'%}">
+<script type="text/javascript" src="{%static 'js/jquery.min.js'%}"></script>{%endblock%}
+{%block heading%}APKASAMAN SELLER
+{%endblock%}
+{%block body%}
+<div class="apka_shop_regis_top">
+  <div class="apka_shop_regis_1"> Step 1</div>
+  <div class="apka_shop_regis_21"></div>
+  <div class="apka_shop_regis_23">Your Shop</div>
+  <div class="apka_shop_regis_22"></div>
+  <div class="apka_shop_regis_3"> Step 2</div>
+</div>
+<div id="regis_body">
+  {{inError}}
+  <input type="text" class="apka_shop_regis_input1" id="shop_cname" value="{{shpname}}" placeholder="Enter your Name">
+  <input type="text" class="apka_shop_regis_input1" id="shop_sname" placeholder="Enter shop Name">
+  <div class="apka_shop_regis_input_category">
+    Selling Category
+  </div>
+  <div class="apka_shop_regis_input_category_box">
+    {%for i in s%}
+    <input type="checkbox" id="{{i.category_key}}" name="shop_category" value="{{i.category_key}}"><label for="{{i.category_key}}"> {{i.category_name}}</label>
+    {%endfor%}
+  </div><div class="apka_shop_category_err" style="color: red;"></div>
+  <div class="apka_shop_regis_input_time">
+  <div class="apka_shop_regis_input_timing1">
+    <div class="apka_shop_regis_input_timing_head">Opening Timing</div>
+    <input type="time" name="" class="apka_shop_regis_input_timing_body1" id="shop_open" value="08:00">
+  </div>
+  <div class="apka_shop_regis_input_timing1">
+    <div class="apka_shop_regis_input_timing_head" style="text-align: center;">Close Timing</div>
+    <input type="time" name="" class="apka_shop_regis_input_timing_body2" id="shop_close" value="21:00">
+  </div>
+</div>
+<div class="apka_shop_regis_input_holiday">
+  <div class="apka_shop_regis_input_holiday_body">Holiday</div>
+  <select class="apka_shop_regis_input_holiday_body2" id="shop_holiday">
+    <option value="never">Never</option>
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+    <option value="Sunday">Sunday</option>
+  </select><div class="apka_shop_holiday_err" style="color: red;margin-left: 20%;"></div>
+</div>
+<button class="apka_shop_regis_getregis">Continue</button>
+</div>
+{%endblock%}
+{%block js%}
+<script type="text/javascript">
+  let csrfcookie = function() {
+            let cookieValue = null,
+                name = "csrftoken";
+            if (document.cookie && document.cookie !== "") {
+                let cookies = document.cookie.split(";");
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) == (name + "=")) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        };
+  $('.apka_shop_regis_getregis').click(function(){
+    var sname=$('#shop_cname').val();
+    var shopname=$('#shop_sname').val();
+    var category = [];
+    $.each($("input[name='shop_category']:checked"), function(){            
+                category.push($(this).val());
+            });
+    var open =$('#shop_open').val();
+    var close =$('#shop_close').val();
+    var holiday =$('#shop_holiday').val();
+    if(sname.length<1 || shopname.length<1 || category.length<1 || holiday.length<1){
+      if(sname.length<1){
+        $('#shop_cname').css('border-color','red');
+        $('#shop_cname').attr('placeholder','Name is Required');
+      }else{
+        $('#shop_cname').css('border-color','');
+      }
+      if(shopname.length<1){
+        $('#shop_sname').css('border-color','red');
+        $('#shop_sname').attr('placeholder','Shop Name is Required');
+      }else{
+        $('#shop_sname').css('border-color','');
+      }
+      if(category.length<1){
+        $('.apka_shop_regis_input_category_box').css('border-color','red');
+        $('.apka_shop_category_err').html('**you must select category');
+      }else{
+        $('.apka_shop_regis_input_category_box').css('border-color','');
+      }
+      if(holiday.length<1){
+        $('.apka_shop_regis_input_holiday_body2').css('border-color','red');
+        $('.apka_shop_holiday_err').html('**you must select holiday');
+      }else{
+        $('.apka_shop_regis_input_holiday_body2').css('border-color','');
+      }
+      return false;
+    }
+    $.ajax({
+      beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+      data:{
+        'cname':sname,
+        'sname':shopname,
+        'sopen':open,
+        'sclose':close,
+        'sholiday':holiday,
+        'ssales':category,
+      },
+      type: 'POST',
+      url: 'Shopregis',
+      success: function(data){
+        window.location=data;
+      }
+    });
+  });
+</script>
+{%endblock%}

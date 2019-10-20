@@ -1,0 +1,493 @@
+    <input class="asi62" id="asa10" type="number" name="" placeholder="Enter Price" style="width: 50%;">
+    <input class="asi62" id="asa20" type="number" name="" placeholder="Enter Weight" style="width: 50%;">
+    <input class="asi62" id="asa25" type="number" name="" placeholder="Enter quantity" style="width: 50%;">
+    <input class="asi62" id="asa30" type="text" name="" placeholder="Enter Product Company">
+    <input class="asi62" id="asa40" type="text" name="" placeholder="Enter Product Brand">
+    {%if c.color == True%}
+    <div class="asi00">
+      <div class="asi01">Color</div>
+      <div class="asi02">
+        {%for i in colort%}  
+        <input type="checkbox" id="asa50" name=icolor value="{{i}}">{{i.colorname}}<br>
+        {%endfor%} 
+      </div>
+    </div>
+    {%endif%}
+    {%if c.size == True%}
+    <div class="asi00">
+      <div class="asi01">Size</div>
+      <div class="asi02"> 
+      {%for i in sizet%}   
+        <input type="checkbox" id="asa60" name="isize" value="{{i}}">{{i.sizename}}<br>
+        {%endfor%}
+      </div>
+    </div>
+    {%endif%}
+    {%if c.refillable == True%}
+    <div class="asi50">
+      <div class="asi51">Refillable</div>
+      <div class="asi52">
+        <input type="radio" id="asa70" name="rf">Yes
+        <input type="radio" id="asa70" name="rf">No
+      </div>
+    </div>
+    {%endif%}
+    {%if c.captype == True%}
+    <input type="text" list="captype" class="asi30" id="asa80" placeholder="Enter Captype" />
+    <datalist id="captype">
+      <option class="apka_shop_input_color" value="Open">Open Type</option>
+      <option class="apka_shop_input_color" value="Close">Close Type</option>
+    </datalist>
+    {%endif%}
+    {%if c.typeid == True%}
+    <input type="text" list="type" class="asi30" id="asa90" placeholder="Enter type" />
+    <datalist id="type">
+    {%for i in typet%}
+    <option class="apka_shop_input_color" value="{{i.typename}}">{{i.typename}}</option>
+    {%endfor%}
+    </datalist>
+    {%endif%}
+    {%if c.rulled_type == True%}
+    <div class="asi20">
+      <div class="asi21">Select The rulled Type of pages</div>
+      <input type="text" list="rulled" class="asi22" id="asa100" placeholder="Enter rulled Type" />
+    <datalist id="rulled">
+      <option class="apka_shop_input_color" value="1 plane">One Side Plane</option>
+      <option class="apka_shop_input_color" value="2 plane">One Side Plane</option>
+    </datalist>
+    </div>
+    {%endif%}
+    {%if c.binding == True%}
+    <div class="asi20">
+      <div class="asi21">Note fot this Group</div>
+      <input type="text" list="binding" class="asi22" id="asa200" placeholder="Enter Binding type" />
+    <datalist id="binding">
+      <option class="apka_shop_input_color">Volvo</option>
+    </datalist>
+    </div>
+    {%endif%}
+    {%if c.materialid == True%}
+    <div class="asi20">
+      <div class="asi21">Note fot this Group</div>
+      <input type="text" list="material" class="asi22" id="asa300" placeholder="Enter material" />
+      <datalist id="material">
+      {%for in in statm%}
+      <option class="apka_shop_input_color" value="{{i.materialname}}">{{i.materialname}}</option>
+      {%endfor%}
+      </datalist>
+    </div>
+    {%endif%}
+    {%if c.pages == True%}
+    <input class="asi62" type="number" id="asa400" placeholder="Enter total pages"><br>
+    {%endif%}
+    {%if c.packsize == True%}
+    <div class="asi60">
+      <div class="asi61">Enter Corerct Data</div>
+      <input class="asi62" type="number" id="asa500" placeholder="Enter total pages">
+    </div>
+    {%endif%}
+    {%if c.gender == True%}
+    <div class="asi40">
+      <div class="asi41">Gender</div>
+      <div class="asi42">
+        <input type="radio" id="asa600" name="gd" value='M'>Male
+        <input type="radio" id="asa600" name="gd" value='F'>Female
+        <input type="radio" id="asa600" name="gd" value='O'>Other
+      </div>
+    </div>
+    {%endif%}
+    {%if c.closure == True%}
+     <div class="asi20">
+      <div class="asi21">Note fot this Group</div>
+      <input type="text" list="closure" class="asi22" id="asa700" placeholder="Enter Closure type" />
+    <datalist id="closure">
+      <option class="apka_shop_input_color">Volvo</option>
+    </datalist>
+    </div>
+    {%endif%}
+    {%if c.solematerial == True%}
+    <input type="text" list="solematerial" class="asi30" id="asa800" placeholder="Enter solematerial" />
+    <datalist id="solematerial">
+    {%for i in solem%}
+    <option class="apka_shop_input_color">{{i.materialname}}</option>
+    {%endfor%}
+    </datalist>
+    {%endif%}
+    {%if c.healtype == True%}
+    <input type="text" list="closure" class="asi30" id="asa900" placeholder="Enter Healtype" />
+    <datalist id="closure">
+      <option class="apka_shop_input_color">Volvo</option>
+    </datalist>
+    {%endif%}
+    {%if c.warranty == True%}
+    <div class="asi60" >
+      <div class="asi61">Enter Corerct Data</div>
+      <input class="asi62" type="number"id='asa1000' placeholder="Enter total pages">
+    </div>
+    {%endif%}
+    {%if c.guarantee == True%}
+    <div class="asi60">
+      <div class="asi61">Enter Corerct Data</div>
+      <input class="asi62" type="number" id="asa2000" placeholder="Enter total pages">
+    </div>
+    {%endif%}
+    {%if c.agegroup == True%}
+    <div class="asi00">
+      <div class="asi01">Age Group</div>
+      <div class="asi02">    
+        <input type="checkbox" id="asa3000" name="iage" class="apka_shop_input_color">14 to 10<br>
+        <input type="checkbox" id="asa3000" name="iage" class="apka_shop_input_color">Blue<br>
+        <input type="checkbox" id="asa3000" name="iage" class="apka_shop_input_color">Green<br>
+        <input type="checkbox" id="asa3000" name="iage" class="apka_shop_input_color">Orange<br>
+      </div>
+    </div>
+    {%endif%}
+    {%if c.occassion == True%}
+     <input type="text" list="occasion" class="asi30" id="asa4000" placeholder="Enter Occassion" />
+    <datalist id="occasion">
+      <option class="apka_shop_input_color">Volvo</option>
+    </datalist>
+    {%endif%}
+    {%if c.outtermaterial == True%}
+     <input type="text" list="outterm" class="asi30" id="asa5000" placeholder="Enter Outter material" />
+    <datalist id="outterm">
+    {%for i in outm%}
+    <option class="apka_shop_input_color">{{i.materialname}}</option>
+    {%endfor%}
+    </datalist>
+    {%endif%}
+    {%if c.innermaterial == True%}
+     <input type="text" list="innerm" class="asi30" id="asa6000" placeholder="Enter Inner material" />
+    <datalist id="innerm">
+    {%for i in inm%}
+    <option name="" class="apka_shop_input_color">{{i.materialname}}</option>
+    {%endfor%}
+    </datalist>
+    {%endif%}
+    {%if c.capacity == True%}
+     <input class="asi62" type="number" id="asa7000" placeholder="Enter capacity"><br>
+    {%endif%}
+    {%if c.pricekg == True%}
+    <div class="asi60">
+      <div class="asi61">Price Per kg</div>
+      <input class="asi62" type="number" id="asa8000" placeholder="Enter Price">
+    </div>
+    {%endif%}
+    {%if c.packedtype == True%}
+    <div class="asi50">
+      <div class="asi51">Packaging</div>
+      <div class="asi52">
+        <input type="radio" id="asa9000" name="pg" value="open">Open
+        <input type="radio" id="asa9000" name="pg" value="close">Close
+      </div>
+    </div>
+    {%endif%}
+    {%if c.flavour == True%}
+     <input type="text" list="flavour" class="asi30" id="asa10000" placeholder="Enter Flavour" />
+    <datalist id="flavour">
+    {%for i in flavour%}
+    <option class="apka_shop_input_color">{{i.flavourname}}</option>
+    {%endfor%}
+    </datalist>
+    {%endif%}
+    {%if c.expdate == True%}
+    <div class="asi40">
+      <div class="asi41">Enter Expiry Date</div>
+     <input type="date" id="asa20000" class="asi43">
+    </div>
+    {%endif%}
+    {%if c.propose == True%}
+     <input type="text" list="propose" class="asi30" id="asa30000" placeholder="Enter Propose" />
+    <datalist id="propose">
+    {%for i in propose%}
+    <option class="apka_shop_input_color">{{i.proposename}}</option>
+    {%endfor%}
+    </datalist>
+     {%endif%}
+    {%if c.animal == True%}
+     <input type="text" list="animal" class="asi30" id="asa40000" placeholder="Enter Animal" />
+    <datalist id="animal">
+    {%for i in animal%}
+    <option class="apka_shop_input_color">{{i.animalname}}</option>
+    {%endfor%}
+    </datalist>
+     {%endif%}
+    {%if c.shape == True%}
+     <input type="text" list="shape" class="asi30" id="asa50000" placeholder="Enter Shape" />
+    <datalist id="shape">
+    {%for i in shape%}
+    <option class="apka_shop_input_color">{{i.shapename}}</option>
+    {%endfor%}
+    </datalist>
+     {%endif%}
+    {%if c.vegtype == True%}
+    <div class="asi50">
+      <div class="asi51">Vegeterian</div>
+      <div class="asi52">
+        <input type="radio" id="asa60000" name="iveg" value="1">Yes
+        <input type="radio" id="asa60000" name="iveg" value="0">No
+      </div>
+    </div>
+    {%endif%}
+    <br><button class="apka_shop_send_data">Add Item</button><br>
+    <div class="apka_shop_cat_img">
+      <div class="apka_shop_cat_img_head">Product Images</div>
+      <div class="apka_shop_cat_img_body">
+      {%for i in pimgs%}
+      <div class="apka_shop_verify_uploaded_images" id="{{i.img_key}}" style="background:url('/media/{{i.img_name}}');background-repeat: no-repeat;background-size: 100% 100%;"></div>
+      {%endfor%}
+      </div>
+      <div class="apka_shop_verify_images">
+        <div class="apka_shop_verify_images_body">
+          <input type="file" name="img" id="hiddenDocument" style="display:none" required>
+          <input type=button id="apka_upload_document"  class="apka_shop_verify_images_input">
+        </div>
+        <div class="apka_shop_verify_images_type">(.jpg,.jpeg,.png)</div>
+      </div>
+    </div>
+    {%if ps%}
+    <script type="text/javascript">
+      document.getElementById('asa00').value='{{ps.product_name}}'
+      document.getElementById('asa10').value='{{ps.product_price}}'
+      document.getElementById('asa20').value='{{ps.product_weight}}'
+      document.getElementById('asa25').value='{{ps.product_quantity}}'
+      document.getElementById('asa30').value='{{ps.perpcompany.company}}'
+      document.getElementById('asa40').value='{{ps.perpcompany.brand}}'
+      document.getElementById('apka_shop_data_subcategory').value='{{ps.product_subcategory}}'
+      {%if c.parentdb == 'KR'%}
+      document.getElementById('asa8000').value='{{ps.perkirana.pricekg}}'
+      document.getElementById('asa90').value='{{ps.perkirana.typeid.typename}}'
+      document.getElementById('asa10000').value='{{ps.perkirana.flavour}}'
+      document.getElementById('asa30000').value='{{ps.perkirana.propose}}'
+      document.getElementById('asa40000').value='{{ps.perkirana.animal}}'
+      {%endif%}
+      {%if c.parentdb == 'ST'%}
+       document.getElementById('asa90').value='{{ps.stationary.typeid}}'
+      document.getElementById('asa70').value='{{ps.stationary.refillable}}'
+      document.getElementById('asa80').value='{{ps.stationary.captype}}'
+      document.getElementById('asa60').value='{{ps.stationary.size}}'
+      document.getElementById('asa400').value='{{ps.stationary.pages}}'
+      document.getElementById('asa100').value='{{ps.stationary.rulled_type}}'
+      document.getElementById('asa200').value='{{ps.stationary.binding}}'
+      document.getElementById('asa300').value='{{ps.stationary.materialid}}'
+      document.getElementById('asa500').value='{{ps.stationary.packsize}}'
+      {%endif%}
+    </script>
+    {%endif%}
+  <script type="text/javascript">
+    var imagesid=[];
+      {%for i in pimgs%}
+      imagesid.push('{{i.img_key}}');
+      {%endfor%}
+    $('.apka_shop_send_data').click(function(){
+      var name=$('#asa00').val();
+      var price=$('#asa10').val();
+      var weight=$('#asa20').val();
+      var company=$('#asa30').val();
+      var brand=$('#asa40').val();
+      var quantity=$('#asa25').val();
+      //for kirana,dairy,bakery data
+      {%if c.parentdb == 'KR'%}
+      var pricekg=$('#asa8000').val();
+      var packedtype=$('#asa9000').val();
+      var expdate=$('#asa20000').val();
+      var flavour=$('#asa10000').val();
+      var propose=$('#asa30000').val();
+      var animal=$('#asa40000').val();
+      var shape=$('#asa50000').val();
+      var vegtype=[];
+      $.each($("input[name='iveg']:checked"), function(){            
+                vegtype.push($(this).val());
+            });
+      var typeid=$('#asa90').val();
+     
+       $.ajax({
+        url:'getshopitem',
+        type:'GET',
+        data:{
+          'price':price,
+          'name':name,
+          'weight':weight,
+          'company':company,
+          'brand':brand,
+          'pricekg':pricekg,
+          'packedtype':packedtype,
+          'expdate':expdate,
+          'flavour':flavour,
+          'propose':propose,
+          'animal':animal,
+          'shape':shape,
+          'vegtype':vegtype,
+          'typeid':typeid,
+          'quantity':quantity,
+          'images':imagesid,
+          'category':$('#apka_shop_data_category').val(),
+          'subcategory':$('#apka_shop_data_subcategory').val()
+        },
+        success: function(data){
+      console.log(data)
+      $('.apka_shop_category_input').html('');
+       itemData.push({pdname:name,pdprice:price,pdquan:quantity,uid:data});
+      toggleItem();
+      cats_first(1);
+      
+    },
+        dataType: 'html'
+      });
+      {%endif%}
+
+      //for stationary data
+
+      {%if c.parentdb == 'ST'%}
+      var typeid=$('#asa90').val();
+      var color=[];
+      $.each($("input[name='icolor']:checked"), function(){            
+                color.push($(this).val());
+            });
+      var refill=$('#asa70').val();
+      var captype=$('#asa80').val();
+      var pages=$('#asa400').val();
+      var rulled=$('#asa100').val();
+      var binding=$('#asa200').val();
+      var size=[];
+      $.each($("input[name='isize']:checked"), function(){            
+                size.push($(this).val());
+            });
+      var materialid=$('#asa300').val();
+      var packsize=$('#asa500').val();
+      {%endif%}
+
+      //for footwear data
+
+      {%if c.parentdb == 'FW'%}
+      var color=[];
+      $.each($("input[name='icolor']:checked"), function(){            
+                color.push($(this).val());
+            });
+      var size=[];
+      $.each($("input[name='isize']:checked"), function(){            
+                size.push($(this).val());
+            });
+      var gender=$('#asa600').val();
+      var materialid=$('#asa300').val();
+      var closure=$('#asa700').val();
+      var solematerial=$('#asa800').val();
+      var healtype=$('#asa900').val();
+      var warranty=$('#asa1000').val();
+      var guarantee=$('#asa2000').val();
+      var occassion=$('#asa4000').val();
+      var agegroup=[];
+      $.each($("input[name='iage']:checked"), function(){            
+                agegroup.push($(this).val());
+            });
+      {%endif%}
+
+      //for bags Data
+
+      {%if c.parentdb == 'BG'%}
+      var outtermaterial=$('#asa5000').val();
+      var innermaterial=$('#asa6000').val();
+      var capacity=$('#asa7000').val();
+      {%endif%}
+     
+    });
+    
+     //for get the file upload
+  $('#apka_upload_document').click(function(){ 
+    $('#hiddenDocument').trigger('click');
+});
+  var k;
+  
+  //for image upload to database
+  jQuery("#hiddenDocument").on("change", function() {
+     let csrfcookie = function() {
+            let cookieValue = null,
+                name = "csrftoken";
+            if (document.cookie && document.cookie !== "") {
+                let cookies = document.cookie.split(";");
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) == (name + "=")) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        };
+     k=URL.createObjectURL(event.target.files[0]);
+        formdata = new FormData();
+    var file = this.files[0];
+    if (formdata) {
+      formdata.append("image", file);
+      jQuery.ajax({
+         beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+        url: "productimage",
+        type: "POST",
+        data: formdata,
+        processData: false,
+        contentType: false,
+        success:searchImages
+      });
+    }           
+  }); 
+  function searchImages(data, textStatus, jqXHR){
+
+     $('.apka_shop_cat_img_body').append('<div class="apka_shop_verify_uploaded_images" id="'+data+'"><div class="apka_shop_verify_uploaded_close" id="'+data+'" onclick="deleteUpload(this,2)">X</div></div>');
+    console.log(data);
+    imagesid.push(data);
+    var z=document.getElementById(data);
+    z.style.backgroundImage = "url('"+k+"')";
+    var b=$('.apka_shop_cat_img_body').children().length;
+    if(b>4){
+     $('.apka_shop_cat_img_body').css('height','50%');
+     $('.apka_shop_verify_uploaded_images').css('height','50%');
+     $('.apka_shop_cat_img').css('height','400px');
+    }
+    }
+
+    function deleteUpload(v,tp){
+       let csrfcookie = function() {
+            let cookieValue = null,
+                name = "csrftoken";
+            if (document.cookie && document.cookie !== "") {
+                let cookies = document.cookie.split(";");
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) == (name + "=")) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        };
+      var delVal=v.id;
+      imagesid =imagesid.filter(e => e !== v.id);
+      $(v).parent().remove();
+      jQuery.ajax({
+         beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+        url: "delImage",
+        type: "post",
+        data: {
+          'delVal':delVal,
+          'dbName':tp,
+        },
+        success:function(data){
+          if(data=='done'){
+
+          }
+          console.log(data)
+        }
+      });
+
+    }
+  </script>

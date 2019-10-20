@@ -1,0 +1,151 @@
+{%load static%}
+<div class="apka_shop_product_info_body">
+  <div class="apka_shop_product_info_body_10">
+     <a href="#"><div class="apka_shop_product_info_body_11">
+      <img src="{%static 'Icons/back1.png'%}">
+     </div>
+     </a>
+     <div class="apka_shop_product_info_body_12">
+      {%if sedit%}
+      Edit Product
+      {%else%}
+      Product Info
+      {%endif%}
+     </div>
+   </div>
+   <div class="swiper-container apka_shop_product_info_body_20">
+    <div class="swiper-wrapper" >
+      <div class="swiper-slide" style="width: 100%;"><img src="{%static 'img/shop5.jpg'%}"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="apka_shop_product_info_body_30">
+    <div class="aspi00">
+      <label>Product Name</label>
+      <input type="text" class="aspi01" id="asup00" value="{{g.product_name}}" {%if sedit%}{%else%}readonly{%endif%}>
+    </div>
+    <div class="aspi10">
+      <label>Price</label><br>
+      <input type="text" class="aspi01" value="Rs" style="width: 30%" readonly>
+      <input type="text" class="aspi01" id="asup01" value="{{g.product_price}}" style="text-align: left;" {%if sedit%}{%else%}readonly{%endif%}>
+    </div>
+    <div class="aspi10" >
+      <label>Weight</label><br>
+      <input type="text" class="aspi01" id="asup02" value="{{g.product_weight}}" {%if sedit%}{%else%}readonly{%endif%}>
+      <input type="text" class="aspi01" id="asup03" value="{{g.product_measure}}" style="width: 30%" {%if sedit%}{%else%}readonly{%endif%}>
+    </div>
+    <div class="aspi00" style="width: 20%">
+      <label>Quantity</label>
+      <input type="text" class="aspi01" id="asup04" value="{{g.product_quantity}}" style="text-align: center;" {%if sedit%}{%else%}readonly{%endif%}>
+    </div>
+    <div class="aspi00" style="width: 60%">
+      <label>Category</label>
+      <input type="text" class="aspi01" value="{{g.product_category.category_name}}" readonly>
+    </div>
+    <div class="aspi00">
+      <label>Subcategory</label>
+      <input type="text" class="aspi01" id="asup05" value="{{g.product_subcategory.sub_category_name}}" {%if sedit%}{%else%}readonly{%endif%}>
+    </div>
+    <div class="aspi00">
+      <label>Company</label>
+      <input type="text" class="aspi01" id="asup06" value="{{g.pcompany.company}}" {%if sedit%}{%else%}readonly{%endif%}>
+    </div>
+    <div class="aspi00">
+      <label>Brand</label>
+      <input type="text" class="aspi01" id="asup07" value="{{g.pcompany.brand}}" {%if sedit%}{%else%}readonly{%endif%}>
+    </div>
+    {%if sedit%}
+    <div class="aspi00">
+      <input type="hidden" id="aspi08" value="{{g.product_id}}">
+      <input type="submit" class="aspi20" id="apka_updateproduct" value="Update" style="background-color: green;width: 40%;margin-left: 30%">
+    </div>
+    {%endif%}
+  </div>
+  </div>
+  <script type="text/javascript">
+    var swiper2 = new Swiper('.apka_shop_product_info_body_20', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: false,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+    });
+     $('#apka_updateproduct').click(function(){
+      var pname=$('#asup00').val()
+      var pprice=$('#asup01').val()
+      var pquantity=$('#asup04').val()
+      var pweight=$('#asup02').val()
+      var pmeasure=$('#asup03').val()
+      var psubcategory=$('#asup05').val()
+      var pcompany=$('#asup06').val()
+      var pbrand=$('#asup07').val()
+      var ppid=$('#aspi08').val()
+      if(!pname || !pprice || !pquantity || !pweight || !psubcategory
+         || !pcompany || !pbrand || !pmeasure){
+        if(!pname){
+          $('#asup00').css('background-color','red')
+        }else{
+          $('#asup00').css('background-color','purple')
+        }
+        if(!pquantity){
+          $('#asup04').css('background-color','red')
+        }else{
+          $('#asup04').css('background-color','purple')
+        }
+        if(!pprice){
+          $('#asup01').css('background-color','red')
+        }else{
+          $('#asup01').css('background-color','purple')
+        }
+        if(!pweight){
+          $('#asup02').css('background-color','red')
+        }else{
+          $('#asup02').css('background-color','purple')
+        }
+        if(!psubcategory){
+          $('#asup05').css('background-color','red')
+        }else{
+          $('#asup05').css('background-color','purple')
+        }
+        if(!pcompany){
+          $('#asup06').css('background-color','red')
+        }else{
+          $('#asup06').css('background-color','purple')
+        }
+        if(!pbrand){
+          $('#asup07').css('background-color','red')
+        }else{
+          $('#asup07').css('background-color','purple')
+        }
+        if(!pmeasure){
+          $('#asup03').css('background-color','red')
+        }else{
+          $('#asup03').css('background-color','purple')
+        }
+        return false;
+      }
+      console.log(ppid)
+      $.ajax({
+        url:'changeProductdetail',
+        type:'GET',
+        data:{
+          'pprice':pprice,
+          'pname':pname,
+          'pquantity':pquantity,
+          'psubcategory':psubcategory,
+          'pmeasure':pmeasure,
+          'pcompany':pcompany,
+          'ppid':ppid,
+          'pweight':pweight,
+          'pbrand':pbrand
+        },
+        success:function(data){
+          window.location='Shopmain'
+        }
+      });
+     });
+
+  </script>

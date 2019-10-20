@@ -1,0 +1,99 @@
+          <select name="{{isf}}" style="margin-top: 10px;" id="{{isf}}" class="apka_shop_input_category">
+          <option><h3>{{name}}</h3></option>
+          {%for i in data%}
+          {%if isf == 'apka_shop_data_subcategory'%}
+          <option value="{{i.sub_category_key}}">{{i.sub_category_name}}</option>
+          {%elif isf == 'apka_shop_data_subchild'%}
+          <option value="{{i.sub_child_key}}">{{i.sub_child_name}}</option>
+          {%elif isf == 'apka_shop_data_subdaughter'%}
+          <option value="{{i.sub_daughter_key}}">{{i.sub_daughter_name}}</option>
+          {%else%}
+          {%endif%}
+          {%endfor%}
+          </select><br>
+          {%block js%}
+          <script type="text/javascript">
+
+function getField(cat){
+  $.ajax({
+    type: "GET",
+    url: "getField",
+    data:{
+      'cat_val':cat,
+      'catkey':$('#apka_shop_data_category').val(),
+      'csrfmiddlewaretoken' : $("input[name=csrfmiddlewaretoken]").val()
+    },
+    success: function(data){
+      $('.apka_shop_category_input').html(data);
+    },
+    dataType: 'html'
+  });
+}
+            {%if isf == 'apka_shop_data_subcategory'%}
+               //for subChild
+$(function() {
+
+    $('#apka_shop_data_subcategory').change(function() {
+        $.ajax({
+            type: "GET",
+            url: "getSubchild",
+            data: {
+                'select_subcategory' : $('#apka_shop_data_subcategory').val(),
+                'intype':'subcategory',
+                'csrfmiddlewaretoken' : $("input[name=csrfmiddlewaretoken]").val()
+            },
+            success:  searchSubchild,
+            dataType: 'html'
+        });
+    });
+});
+
+function  searchSubchild(data, textStatus, jqXHR)
+{  
+    if(data.length<1){
+      $('.apka_shop_cats_second').html($('#apka_shop_data_subcategory').val());
+      $('.apka_shop_cats_third').html('')
+      $('.apka_shop_cats_fourth').html('')
+      $('.apka_shop_input_name').css('display','block')
+      getField($('#apka_shop_data_subcategory').val())
+    }else{
+      $('.apka_shop_cats_second').html($('#apka_shop_data_subcategory').val()+" >> ");
+      $('#apka_shop_id_subchild').html(data);
+      $('#apka_shop_id_subcategory').css('display','none');
+      $('#apka_shop_id_subchild').css('display','block');
+    }
+}
+{%endif%}
+{%if isf == 'apka_shop_data_subchild'%}
+//for subDaughter
+$(function() {
+
+    $('#apka_shop_data_subchild').change(function() {
+        $.ajax({
+            type: "GET",
+            url: "getSubchild",
+            data: {
+                'select_subcategory' : $('#apka_shop_data_subchild').val(),
+                'intype':'subchild',
+                'csrfmiddlewaretoken' : $("input[name=csrfmiddlewaretoken]").val()
+            },
+            success:  searchSubdaughter,
+            dataType: 'html'
+        });
+    });
+});
+
+function  searchSubdaughter(data, textStatus, jqXHR)
+{
+     if(data.length<1){
+      $('.apka_shop_cats_third').html($('#apka_shop_data_subchild').val());
+    }else{
+      $('.apka_shop_cats_third').html($('#apka_shop_data_subchild').val()+" >> ");
+      $('#apka_shop_id_subdaughter').html(data)
+      $('#apka_shop_id_subchild').css('display','none');
+      $('#apka_shop_id_subdaughter').css('display','block');
+    }
+}
+{%endif%}
+          </script>
+          {%endblock%}

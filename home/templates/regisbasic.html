@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%load static%}
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{%block title%}{%endblock%}</title>
+    <link rel = "icon" type = "image/png" href = "{%static 'Logos/Final_Logo_resized.png'%}">
+    <link rel="stylesheet" href="{%static 'css/header-360px.css'%}">
+    {%block link%} {%endblock%}
+
+</head>
+   {%block style%}
+   {%endblock%}
+</style>
+<body>
+    <div class="mob_home_top">
+      <div class="mob_home_top1">
+        <div class="mob_home_top_opennav">
+          <span onclick="opendownNav()">
+          <span class="mob_nav_line" id="mob_nav_line1"></span>
+          <span class="mob_nav_line"></span>
+          <span class="mob_nav_line"></span>
+          </span>
+        </div>
+        <div class="mob_home_top_logo" style="margin-left: 23%; width: 40%; height: 120%;" >
+          <div class="mob_home_top_logo1">
+            <a href="/"><img src="{%static 'Logos/mainlogotext.png'%}"></a>
+          </div>
+        </div>
+        <div class="mob_home_top_logo" style='color: white; font-weight: bold; text-align: center;width: 100%;margin-top: 5px; height: 0px;'>
+         {%block heading%}{%endblock%}
+        </div>
+      </div>
+    </div>
+    <div class="apka_mob_down_bar">
+      <a href="Shopmain" style="text-decoration: none;color: white;"><div class="apka_mob_down_data">Home</div></a>
+      <div class="apka_mob_down_data">Pricing</div>
+      <div class="apka_mob_down_data">About Us</div>
+      <div class="apka_mob_down_data">Contact Us</div>
+      <div class="apka_mob_down_data_line"></div>
+   </div>
+    
+    {%block body%}
+    {%endblock%}
+
+
+    <!-- javascript links -->
+    <script type="text/javascript">
+        //for down Navbar
+/* Set the width of the side navigation to 250px */
+function opendownNav() {
+  $('.apka_mob_down_bar').slideToggle();
+}
+/* Set the width of the side navigation to 0 */
+function closedownNav() {
+  document.getElementById("apkasidenav").style.width = "0";
+}
+
+    </script>
+      {%block js%}
+    {%endblock%} 
+
+
+</body>
+</html>

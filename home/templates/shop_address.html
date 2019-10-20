@@ -1,0 +1,69 @@
+{%extends 'regisbasic.html'%}
+{%load static %}
+{%block title%}Registration{%endblock%}
+{%block link%} <link rel="stylesheet" type="text/css" href="{%static 'css/shopregistration.css'%}">
+<script type="text/javascript" src="{%static 'js/jquery.min.js'%}"></script>{%endblock%}
+{%block heading%}APKASAMAN SELLER
+{%endblock%}
+{%block body%}
+<div class="apka_shop_regis_top">
+  <div class="apka_shop_regis_1"> Step 2</div>
+   <div class="apka_shop_regis_21"></div>
+  <div class="apka_shop_regis_23">Shop Address</div>
+  <div class="apka_shop_regis_22"></div>
+  <div class="apka_shop_regis_3"> Step 3</div>
+</div>
+<div id="regis_body">
+  <input type="text" name="address" class="enter_your_address" placeholder="&nbsp;&nbsp;Enter your Address">
+    <input type="text" name="house_no" class="house_no" placeholder="&nbsp;&nbsp;House No.">
+    <input type="text" name="street" class="street_name" placeholder="&nbsp;&nbsp;Street Name">
+    <input type="text" name="neighbouring_street" class="neighbouring_street" placeholder="&nbsp;&nbsp;Neighbouring Street">
+    <input type="text" name="landmark" class="nearby_landmark" placeholder="&nbsp;&nbsp;Near by Landmark">
+    <input type="text" name="zipcode" class="zipcode" placeholder="&nbsp;&nbsp;Zip Code">
+    <select class="shop_city">
+        <option value="jabalpur">Jabalpur</option>
+        <option value="bhopal">Bhopal</option>
+    </select>
+    <select class="shop_state">
+        <option value="M.P.">Madhya Pradesh</option>
+        <option value="chhatisgard">Bhopal</option>
+    </select>
+    <div class="shop_location_map"><img src="{%static 'Icons/googleselectaddress.jpg'%}"></div>
+    <div class="shop_address_continue">Continue</div>
+</div>
+{%endblock%}
+{%block js%}
+<script type="text/javascript">
+  let csrfcookie = function() {
+            let cookieValue = null,
+                name = "csrftoken";
+            if (document.cookie && document.cookie !== "") {
+                let cookies = document.cookie.split(";");
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) == (name + "=")) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        };
+$('.shop_address_continue').click(function() {
+  var c=1;
+  $.ajax({
+    beforeSend: function(request, settings) {
+                        if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                            request.setRequestHeader("X-CSRFToken", csrfcookie());
+                        }
+                    },
+      data:c,
+      type: 'POST',
+      url: 'shopaddress',
+      success: function(data){
+        window.location=data;
+      }
+  });
+});
+</script>
+{%endblock%}
